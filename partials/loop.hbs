@@ -1,4 +1,4 @@
-<article class="{{post_class}} u-shadow"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
+<article class="{{post_class}} bg-heavy u-shadow"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
 <a class="post-link" href="{{url}}">
     {{#if feature_image}}
         {{#if featured}}
@@ -30,9 +30,12 @@
 
     <div class="post-wrapper">
         <header class="post-header">
-            {{#primary_tag}}
+            {{#foreach tags}}
                 <span class="post-tag">{{name}}</span>
-            {{/primary_tag}}
+            {{/foreach}}
+            <!--{{#primary_tag}}
+                <span class="post-tag">{{name}}</span>
+            {{/primary_tag}}-->
 
             <h2 class="post-title">
                 {{title}}

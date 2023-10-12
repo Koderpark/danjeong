@@ -1,11 +1,17 @@
 {{!< default}}
-<div class="gh-page">
+<div class="gh-page flex">
     <div class="gh-container">
+        <div class="bg-heavy">
+            hello world
+            <div>
 
-        <div class="gh-postfeed">
+            </div>
+        </div>
+
+        <div class="gh-postfeed post-feed">
         {{#foreach posts}}
 
-            {{> "card" page=../pagination.page }} {{!-- partials/card.hbs --}}
+            {{> "loop" page=../pagination.page }} {{!-- partials/card.hbs --}}
 
         {{/foreach}}
         </div>
