@@ -10,10 +10,10 @@
         {{#if custom_excerpt}}
         <p class="gh-excerpt">{{custom_excerpt}}</p>
         {{/if}}
-
-        {{#if primary_tag}}
-            in <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
-        {{/if}}
+        
+        <div>
+            {{>taglist}}
+        </div>
 
         {{#if feature_image}}
         <figure class="gh-feature-image">

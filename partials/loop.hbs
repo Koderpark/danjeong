@@ -1,9 +1,9 @@
-<article class="{{post_class}} bg-heavy u-shadow"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
+<article class="{{post_class}} flex bg-heavy u-shadow">
 <a class="post-link" href="{{url}}">
     {{#if feature_image}}
         {{#if featured}}
             <img
-                class="post-image u-object-fit"
+                class="post-image u-object-fit rounded-lg"
                 src="{{img_url feature_image}}"
                 alt="{{title}}"
                 loading="lazy"
@@ -12,7 +12,7 @@
         <figure class="post-media">
             <div class="u-placeholder same-height rectangle">
                 <img
-                    class="post-image u-object-fit"
+                    class="post-image u-object-fit rounded-lg"
                     srcset="{{img_url feature_image size="s"}} 400w,
                             {{img_url feature_image size="m"}} 750w,
                             {{img_url feature_image size="l"}} 960w,
@@ -30,14 +30,9 @@
 
     <div class="post-wrapper">
         <header class="post-header">
-            {{#foreach tags}}
-                <span class="post-tag">{{name}}</span>
-            {{/foreach}}
-            <!--{{#primary_tag}}
-                <span class="post-tag">{{name}}</span>
-            {{/primary_tag}}-->
+            {{>taglist}}
 
-            <h2 class="post-title">
+            <h2 class="post-title font-bold">
                 {{title}}
             </h2>
         </header>
@@ -49,8 +44,7 @@
         {{/if}}
     </div>
 
-    <footer class="post-footer">
-        <span class="post-more">Read More</span>
+    <!--<footer class="post-footer">
 
         <div class="post-author">
             {{#foreach authors}}
@@ -61,6 +55,6 @@
                 {{/if}}
             {{/foreach}}
         </div>
-    </footer>
+    </footer>-->
 </a>
 </article>

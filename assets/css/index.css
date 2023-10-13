@@ -78,8 +78,6 @@
 
 .bg-heavy {
   @apply bg-gray-50 dark:bg-gray-900 shadow-lg;
-  border-radius: 1rem;
-  overflow: hidden;
 }
 
 .gh-main {
@@ -94,17 +92,6 @@
 
 .gh-article {
   padding: 8vmin 0;
-}
-
-.gh-postfeed {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* auto-fit, minmax(min(350px, 100%) */
-  gap: 2rem;
-  padding: 8vmin 0;
-}
-
-.gh-postfeed > *:first-child {
-  /*grid-column: 1 / -1;*/
 }
 
 .gh-container {
