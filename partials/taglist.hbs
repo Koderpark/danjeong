@@ -1,5 +1,7 @@
-<div>
-  {{#foreach tags}}
-    <span href="{{url}}" class="post-tag" {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}>{{name}}</span>
-  {{/foreach}}
-</div>
+{{#if primary_tag}}
+  <div class="mb-4">
+    {{#foreach tags}}
+      <span href="{{url}}" class="post-tag" {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}>{{name}}</span>
+    {{/foreach}}
+  </div>
+{{/if}}
