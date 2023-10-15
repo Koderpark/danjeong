@@ -1,13 +1,9 @@
 <header id="gh-head" class="px-12 py-8">
-  <nav class="grid w-full gap-12 grid-cols-[1fr_auto_1fr]">
+  <nav class="gh-head-inner grid w-full">
 
     <div class="gh-head-brand">
-      <a class="gh-head-logo text-4xl font-bold" href="{{@site.url}}">
-        {{#if @site.logo}}
-          <img src="{{@site.logo}}" alt="{{@site.title}}" />
-        {{else}}
-          {{@site.title}}
-        {{/if}}
+      <a class="gh-head-logo text-2xl font-bold" href="{{@site.url}}">
+        {{@site.title}}
       </a>
       <a class="gh-burger" role="button" aria-label="menu">
         <div class="gh-burger-box">
@@ -15,7 +11,7 @@
         </div>
       </a>
     </div>
-    <div class="gh-head-menu flex items-center">
+    <div class="gh-head-menu flex items-center text-base">
       {{navigation}}
     </div>
     <div class="gh-head-actions">
@@ -25,7 +21,10 @@
           {{#if @member}}
             <a class="gh-button" href="#/portal/account">Account</a>
           {{else}}
-            <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
+            <a
+              class="gh-button text-xl"
+              href="{{@site.signup_url}}"
+            >Subscribe</a>
           {{/if}}
         {{/if}}
       </div>

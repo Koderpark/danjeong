@@ -27,9 +27,24 @@
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
+.tags {
+  height: 200px;
+  overflow: hidden;
+  display: block;
+}
+
+.logo {
+  max-height: 8rem;
+}
+
+#ghost-portal-root,
+.footer-cta {
+  display: none;
+}
+
 .u-shadow {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0.75rem;
   box-shadow: var(--shadow-base);
   transition: box-shadow 0.3s var(--animation-base);
 }

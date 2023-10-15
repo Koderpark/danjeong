@@ -25,26 +25,22 @@
 
 .post-wrapper {
   transition: 0.2s ease;
-  @apply py-8 ps-4 pe-8;
+  @apply py-4 ps-4 pe-8;
   flex-grow: 1;
 }
 
 .post-wrapper:hover {
-  @apply ps-6 pe-6;
+  @apply px-6;
 }
 
 .post-tag {
-  @apply text-gray-950;
+  @apply text-gray-950 px-2 py-1;
   display: inline-block;
-  margin-bottom: 0.5rem;
-  margin-right: 0.25rem;
-  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1;
   background-color: var(--tag-color, var(--ghost-accent-color));
   text-transform: uppercase;
   letter-spacing: 0.005em;
-  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -146,11 +142,11 @@
   inset: 0;
   z-index: 10;
   content: "";
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
 }
 
 .post-feed .featured.no-image .post-link::before {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent),
     var(--tag-color, var(--ghost-accent-color));
 }
 
@@ -181,6 +177,7 @@
 
 .post-feed .featured .post-header {
   margin-bottom: 0;
+  @apply text-gray-100;
 }
 
 .post-feed .featured .post-title {

@@ -46,7 +46,6 @@
 }
 
 html {
-  font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -56,9 +55,6 @@ body {
   padding: 0;
   color: #464646;
   font-family: var(--font-sans-serif);
-  font-size: 1.5rem;
-  line-height: 1.6em;
-  font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -356,16 +352,12 @@ h6 {
 
 .gh-button {
   display: inline-block;
-  min-width: 75px;
-  height: var(--height);
-  padding: 0 2rem;
+  padding: 0.25rem 2rem;
   border: 0;
   border-radius: var(--radius);
   cursor: pointer;
   font-family: var(--font-sans-serif);
-  font-size: 1.4rem;
   font-weight: var(--font-normal);
-  line-height: var(--height);
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -402,7 +394,7 @@ h6 {
 .gh-button {
   color: inherit;
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px currentColor
+  box-shadow: inset 0 0 0 2px currentColor;
 }
 
 .gh-button:hover {
@@ -424,6 +416,10 @@ h6 {
 
 /* Ghost components */
 
+.gh-head-inner {
+  grid-template-columns: 1fr auto 1fr;
+}
+
 /* Brand
 /* ---------------------------------------------------------- */
 
@@ -443,10 +439,6 @@ h6 {
   line-height: 1.2em;
 }
 
-.gh-head-logo img {
-  max-height: 45px;
-}
-
 /* Primary Navigation
 /* ---------------------------------------------------------- */
 
@@ -463,8 +455,6 @@ h6 {
 }
 
 .gh-head-menu .nav a {
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
   display: inline-block;
   padding: 5px 0;
 }
@@ -474,8 +464,8 @@ h6 {
   background-color: rgb(199 210 254 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(2 6 23 / var(--tw-text-opacity));
-  border-radius: 8px;
-  padding: 5px 2rem;
+  border-radius: 0.75rem;
+  padding: 0.25rem 1rem;
 }
 
 /* Secondary Navigation
@@ -701,7 +691,10 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
   }
 
   #gh-head .gh-head-menu .nav a {
-    padding: 8px 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   #gh-head .gh-head-menu .nav {
@@ -742,6 +735,23 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     left: 0;
     z-index: 900;
     overflow-y: scroll;
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  }
+
+  :is(.dark .gh-head-open #gh-head) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(3 7 18 / var(--tw-bg-opacity));
+  }
+
+  .gh-head-open #gh-head {
+    --tw-text-opacity: 1;
+    color: rgb(3 7 18 / var(--tw-text-opacity));
+  }
+
+  :is(.dark .gh-head-open #gh-head) {
+    --tw-text-opacity: 1;
+    color: rgb(243 244 246 / var(--tw-text-opacity));
   }
 
   .gh-head-open #gh-head .gh-head-inner {
@@ -1383,8 +1393,8 @@ a.gh-powered svg {
 
 .post-wrapper {
   transition: 0.2s ease;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   -webkit-padding-start: 1rem;
           padding-inline-start: 1rem;
   -webkit-padding-end: 2rem;
@@ -1393,25 +1403,23 @@ a.gh-powered svg {
 }
 
 .post-wrapper:hover {
-  -webkit-padding-start: 1.5rem;
-          padding-inline-start: 1.5rem;
-  -webkit-padding-end: 1.5rem;
-          padding-inline-end: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .post-tag {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   --tw-text-opacity: 1;
   color: rgb(3 7 18 / var(--tw-text-opacity));
   display: inline-block;
-  margin-bottom: 0.5rem;
-  margin-right: 0.25rem;
-  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1;
   background-color: var(--tag-color, var(--ghost-accent-color));
   text-transform: uppercase;
   letter-spacing: 0.005em;
-  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -1515,11 +1523,11 @@ a.gh-powered svg {
   inset: 0;
   z-index: 10;
   content: "";
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
 }
 
 .post-feed .featured.no-image .post-link::before {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent),
     var(--tag-color, var(--ghost-accent-color));
 }
 
@@ -1550,6 +1558,8 @@ a.gh-powered svg {
 
 .post-feed .featured .post-header {
   margin-bottom: 0;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
 .post-feed .featured .post-title {
@@ -2139,12 +2149,20 @@ video {
   margin-bottom: 6rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -2155,32 +2173,53 @@ video {
   display: grid;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-full {
   width: 100%;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.grid-cols-\[1fr_auto_1fr\] {
-  grid-template-columns: 1fr auto 1fr;
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
 
-.gap-12 {
-  gap: 3rem;
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .break-keep {
@@ -2191,9 +2230,22 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-8 {
@@ -2206,9 +2258,23 @@ video {
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-\[11px\] {
+  font-size: 11px;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -2222,9 +2288,24 @@ video {
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
+.tags {
+  height: 200px;
+  overflow: hidden;
+  display: block;
+}
+
+.logo {
+  max-height: 8rem;
+}
+
+#ghost-portal-root,
+.footer-cta {
+  display: none;
+}
+
 .u-shadow {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0.75rem;
   box-shadow: var(--shadow-base);
   transition: box-shadow 0.3s var(--animation-base);
 }
