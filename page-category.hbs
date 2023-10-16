@@ -1,20 +1,12 @@
 {{!< default}}
 <div class="gh-page flex">
-  <div class="gh-container">
-    <div class="bg-heavy w-fit p-4 rounded-xl my-24">
-      <p class="inline-block text-2xl">카테고리</p>
+  <div class="gh-container-sm">
+    <div class="w-fit rounded-xl my-8 p-4">
+      <p class="inline-block text-4xl font-bold">카테고리</p>
       <p class="inline-block text-xl">category</p>
     </div>
     {{#post}}
-      {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
-        {{#foreach tags}}
-          <a href="{{url}}" class="w-full tags mb-4">
-
-            <img src="{{feature_image}}" class="" />
-            <h2>{{name}} <small>({{count.posts}})</small></h2>
-          </a>
-        {{/foreach}}
-      {{/get}}
+      {{>card-tag}}
     {{/post}}
   </div>
 </div>

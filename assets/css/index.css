@@ -29,8 +29,22 @@
 
 .tags {
   height: 200px;
-  overflow: hidden;
-  display: block;
+}
+
+.tags .is-image {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.tags .no-image {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent),
+    var(--tag-color, var(--ghost-accent-color));
+}
+
+.tags .is-image,
+.tags .no-image {
+  transition: 0.2s ease;
+  @apply ps-8 pe-12 py-8;
+  @apply hover:px-10;
 }
 
 .logo {
@@ -112,6 +126,12 @@
 .gh-container {
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gh-container-sm {
+  width: 100%;
+  max-width: 720px;
   margin: 0 auto;
 }
 
