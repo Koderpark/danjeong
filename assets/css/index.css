@@ -6,6 +6,7 @@
 @import "components/global.css";
 @import "components/forms.css";
 @import "components/buttons.css";
+@import "components/card.css";
 /* Ghost components */
 @import "ghost/header.css";
 @import "ghost/content.css";
@@ -26,26 +27,6 @@
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
-
-.tags {
-  height: 200px;
-}
-
-.tags .is-image {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
-}
-
-.tags .no-image {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent),
-    var(--tag-color, var(--ghost-accent-color));
-}
-
-.tags .is-image,
-.tags .no-image {
-  transition: 0.2s ease;
-  @apply ps-8 pe-12 py-8;
-  @apply hover:px-10;
-}
 
 .logo {
   max-height: 8rem;
@@ -106,7 +87,7 @@
 }
 
 .bg-heavy {
-  @apply bg-gray-50 dark:bg-gray-900 shadow-lg;
+  @apply bg-gray-50 dark:bg-gray-900 shadow-base;
 }
 
 .gh-main {

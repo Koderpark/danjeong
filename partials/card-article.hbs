@@ -1,19 +1,17 @@
 {{#foreach posts}}
-  <article class="{{post_class}} u-shadow">
-    <a class="post-link" href="{{url}}">
+  <article class="card card-article {{post_class}} u-shadow">
+    <a href="{{url}}" class="">
       {{#if feature_image}}
         {{#if featured}}
           <img
-            class="post-image u-object-fit rounded-lg"
             src="{{img_url feature_image}}"
             alt="{{title}}"
             loading="lazy"
           />
         {{else}}
-          <figure class="post-media">
+          <figure>
             <div class="u-placeholder same-height rectangle">
               <img
-                class="post-image u-object-fit rounded-lg"
                 srcset="{{img_url feature_image size="s"}} 400w,
                             {{img_url feature_image size="m"}} 750w,
                             {{img_url feature_image size="l"}} 960w,
@@ -29,32 +27,32 @@
         {{/if}}
 
       {{else}}
-        <figure class="post-media r-8">
+        <figure>
           <div class="u-placeholder same-height rectangle">
           </div>
         </figure>
       {{/if}}
 
-      <div class="post-wrapper">
-        <header class="post-header w-full">
+      <div class="card-desc">
+        <header class="w-full">
           {{#if primary_tag}}
             <div class="mb-2 g-4 flex flex-wrap gap-1">
               {{#foreach tags}}
                 <span
                   href="{{url}}"
-                  class="post-tag text-[11px]"
+                  class="tag"
                   {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}
                 >{{name}}</span>
               {{/foreach}}
             </div>
           {{/if}}
 
-          <h2 class="text-xl break-keep font-bold">
+          <p class="text-xl break-keep font-bold">
             {{title}}
-          </h2>
+          </p>
 
           {{#if excerpt}}
-            <div class="post-excerpt text-sm mt-2">
+            <div class="break-keep text-sm mt-2">
               {{excerpt words="12"}}
             </div>
           {{/if}}
