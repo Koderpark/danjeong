@@ -1,0 +1,92 @@
+.list {
+  @apply overflow-hidden relative rounded-xl;
+}
+
+.list.featured {
+  position: relative;
+}
+
+.list a {
+  height: 100%;
+  width: 100%;
+}
+
+.list-desc {
+  position: relative;
+  background-color: transparent;
+  transition: 0.2s ease;
+}
+
+/* list-tag */
+
+.list-tag {
+  @apply relative mb-8;
+}
+
+.list-tag img {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @apply rounded-xl;
+}
+
+.list-tag .list-desc {
+  @apply text-gray-100;
+}
+
+.list-tag a::before {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  content: "";
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), transparent);
+}
+
+.list-tag.no-image a::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), transparent),
+    var(--tag-color, var(--ghost-accent-color));
+}
+
+.list-tag .list-desc {
+  @apply ps-8 pe-12 py-10 hover:px-10;
+}
+
+/* list-article */
+
+.list-article {
+  @apply mb-4;
+}
+
+.list-article .img {
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.list-article .list-desc {
+  @apply py-6 ps-6 pe-10 hover:px-8;
+}
+
+.list-article.no-image:not(.featured) img {
+  background: var(--tag-color, var(--ghost-accent-color));
+}
+
+.list-article.featured {
+  @apply shadow bg-heavy;
+}
+
+.list-article.featured.no-image a::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), transparent),
+    var(--tag-color, var(--ghost-accent-color));
+}
+
+.list-article .tag {
+  @apply text-gray-950 px-2 py-1 text-[11px] font-bold;
+  background-color: var(--tag-color, var(--ghost-accent-color));
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+}

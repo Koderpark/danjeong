@@ -104,9 +104,7 @@
                 <span class="text">You might also like...</span>
             </h3>
             <div class="post-feed">
-                {{#foreach posts}}
-                    {{> "loop" page=../pagination.page }}
-                {{/foreach}}
+                {{> "card-article"}}
             </div>
         </section>
     {{/get}}

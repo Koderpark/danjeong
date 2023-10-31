@@ -6,7 +6,9 @@
       <p class="inline-block text-xl">category</p>
     </div>
     {{#post}}
-      {{>card-tag}}
+      {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+        {{>list-tag}}
+      {{/get}}
     {{/post}}
   </div>
 </div>

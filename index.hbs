@@ -1,28 +1,39 @@
 {{!< default}}
-<div class="gh-page flex">
-    <div class="gh-container">
-        <div class="flex flex-cols-2 gap-8 my-24">
-            <div class="bg-heavy rounded-xl w-full h-full flex flex-row">
-                <div class="p-4">
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" class="rounded-xl logo"/>
-                </div>
-                <div class="grow py-4">
-                    <p class="text-2xl font-bold mb-2">{{@site.title}}</p>
-                    <p class="text-xl">{{@site.description}}</p>
-                </div>
-            </div>
-            <div class="bg-heavy p-4 rounded-xl w-full h-full">
-            </div>
+<div class="gh-page flex flex-col">
+  <div class="gh-container">
+    <div class="flex flex-cols-2 gap-8 my-24">
+      <div class="bg-heavy rounded-xl w-full h-full flex flex-row">
+        <div class="p-4">
+          <img
+            src="{{@site.logo}}"
+            alt="{{@site.title}}"
+            class="rounded-xl logo"
+          />
         </div>
-        <div class="gh-postfeed post-feed">
-        {{>card-article}}
+        <div class="grow py-4">
+          <p class="text-2xl font-bold mb-2">{{@site.title}}</p>
+          <p class="text-xl">{{@site.description}}</p>
         </div>
-
-        {{!-- If JS isn't enabled, fallback to standard pagination --}}
-        <noscript>
-            <div class="gh-pagination">
-                {{pagination}}
-            </div>
-        </noscript>
+      </div>
+      <div class="bg-heavy p-4 rounded-xl w-full h-full">
+      </div>
     </div>
+  </div>
+  <div class="gh-container-sm">
+    <div class="w-fit rounded-xl my-8 p-4">
+      <p class="inline-block text-4xl font-bold">최신 글</p>
+      <p class="inline-block text-xl">recent article</p>
+    </div>
+    <div class="gh-postfeed"> <!--post-feed-->
+      {{>list-article}}
+    </div>
+  </div>
+  <div class="gh-container">
+    {{! If JS isn't enabled, fallback to standard pagination }}
+    <noscript>
+      <div class="gh-pagination">
+        {{pagination}}
+      </div>
+    </noscript>
+  </div>
 </div>
