@@ -1,5 +1,11 @@
 <div class="g-4 flex flex-wrap gap-1">
-  {{#foreach tags}}
-    <span href="{{url}}" class="tag"{{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}>{{name}}</span>
-  {{/foreach}}
+  {{#if nested}}
+    {{#foreach tags}}
+      <span href="{{url}}" class="tag" {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}>{{name}}</span>
+    {{/foreach}}
+  {{else}}
+    {{#foreach tags}}
+      <a href="{{url}}" class="tag" {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}>{{name}}</a>
+    {{/foreach}}
+  {{/if}}
 </div>

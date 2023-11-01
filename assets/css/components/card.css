@@ -1,0 +1,43 @@
+.card {
+  @apply overflow-hidden relative rounded-xl;
+}
+
+.card.featured {
+  position: relative;
+}
+
+.card a {
+  height: 100%;
+  width: 100%;
+}
+
+.card-desc {
+  position: relative;
+  background-color: transparent;
+  transition: 0.2s ease;
+  @apply pt-2 px-4 pb-4;
+}
+
+/* list-article */
+
+.card-article .card-image {
+  height: 180px;
+  @apply m-2 rounded-xl overflow-hidden;
+}
+
+.card-article .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @apply object-cover;
+}
+
+.card-article.no-image .img {
+  width: 100%;
+  height: 100%;
+  background-color: var(--tag-color, var(--ghost-accent-color));
+}
+
+.card-article.featured {
+  @apply shadow bg-heavy;
+}

@@ -14,7 +14,7 @@
   --font-sans-serif: "SUIT", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
-  --font-serif: Georgia, Times, serif;
+  --font-serif: "SUIT", Georgia, Times, serif;
   --font-mono: Menlo, Courier, monospace;
   --font-light: 100;
   --font-normal: 400;

@@ -7,6 +7,7 @@
 @import "components/forms.css";
 @import "components/buttons.css";
 @import "components/list.css";
+@import "components/card.css";
 /* Ghost components */
 @import "ghost/header.css";
 @import "ghost/content.css";
@@ -28,8 +29,16 @@
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
+.tag {
+  @apply text-gray-950 px-2 py-1 text-[11px] font-bold;
+  background-color: var(--tag-color, var(--ghost-accent-color));
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
 .logo {
-  max-height: 8rem;
+  max-height: 192px;
 }
 
 #ghost-portal-root,
@@ -175,7 +184,6 @@
 .gh-post-meta {
   display: block;
   margin: 0 0 1rem;
-  font-size: 1.4rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   opacity: 0.8;

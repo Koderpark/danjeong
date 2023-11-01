@@ -1,16 +1,17 @@
 {{#foreach posts}}
   <article class="card card-article {{post_class}} u-shadow">
     <a href="{{url}}" class="">
-      {{#if feature_image}}
-        {{#if featured}}
-          <img
-            src="{{img_url feature_image}}"
-            alt="{{title}}"
-            loading="lazy"
-          />
-        {{else}}
-          <figure>
-            <div class="u-placeholder same-height rectangle">
+      <figure>
+        <div class="card-image">
+          {{#if feature_image}}
+            {{#if featured}}
+              <img
+                class=""
+                src="{{img_url feature_image}}"
+                alt="{{title}}"
+                loading="lazy"
+              />
+            {{else}}
               <img
                 srcset="{{img_url feature_image size="s"}} 400w,
                             {{img_url feature_image size="m"}} 750w,
@@ -22,32 +23,24 @@
                 alt="{{title}}"
                 loading="lazy"
               />
-            </div>
-          </figure>
-        {{/if}}
 
-      {{else}}
-        <figure>
-          <div class="u-placeholder same-height rectangle">
-          </div>
-        </figure>
-      {{/if}}
+            {{/if}}
+
+          {{else}}
+            <div class="img"></div>
+          {{/if}}
+        </div>
+      </figure>
 
       <div class="card-desc">
         <header class="w-full">
           {{#if primary_tag}}
-            <div class="mb-2 g-4 flex flex-wrap gap-1">
-              {{#foreach tags}}
-                <span
-                  href="{{url}}"
-                  class="tag"
-                  {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}
-                >{{name}}</span>
-              {{/foreach}}
+            <div class="mb-2">
+              {{>pill-tag nested=true }}
             </div>
           {{/if}}
 
-          <p class="text-xl break-keep font-bold">
+          <p class="text-2xl break-keep font-bold">
             {{title}}
           </p>
 
