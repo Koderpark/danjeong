@@ -33,14 +33,7 @@
             {{/if}}
         </header>
         {{/author}}
-
-        <div class="gh-postfeed">
-        {{#foreach posts}}
-
-            {{> "loop"}} {{!-- partials/card.hbs --}}
-
-        {{/foreach}}
-        </div>
-
     </div>
+      {{> "section/title" title="최신 글" subtitle="recent article"}}
+  {{> "section/article-inf"}}
 </div>

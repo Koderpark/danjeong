@@ -1,13 +1,10 @@
 {{!< default}}
-<div class="gh-page flex">
+<div class="gh-page">
+  {{> "section/title" title="카테고리" subtitle="category"}}
   <div class="gh-container-sm">
-    <div class="w-fit rounded-xl my-8 p-4">
-      <p class="inline-block text-4xl font-bold">카테고리</p>
-      <p class="inline-block text-xl">category</p>
-    </div>
     {{#post}}
       {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
-        {{>list-tag}}
+        {{> "list/tag"}}
       {{/get}}
     {{/post}}
   </div>

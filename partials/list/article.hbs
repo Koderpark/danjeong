@@ -1,0 +1,42 @@
+{{#foreach posts}}
+  <article class="list list-article {{post_class}}">
+    <a href="{{url}}" class="relative flex gap-4">
+      <div class="list-desc z-10 flex-1">
+        <header class="w-full">
+          {{#if primary_tag}}
+            <div class="mb-2">
+              {{>pill-tag nested=true }}
+            </div>
+          {{/if}}
+
+          <p class="text-2xl break-keep font-bold">
+            {{title}}
+          </p>
+
+          {{#if excerpt}}
+            <div class="break-keep text-sm mt-2">
+              {{excerpt words="12"}}
+            </div>
+          {{/if}}
+        </header>
+      </div>
+      {{#if feature_image}}
+      <div class="flex flex-col justify-center">
+        <div class="img p-2">
+          <img
+                  srcset="{{img_url feature_image size="s"}} 400w,
+                            {{img_url feature_image size="m"}} 750w,
+                            {{img_url feature_image size="l"}} 960w,
+                            {{img_url feature_image size="xl"}} 1140w,
+                            {{img_url feature_image size="xxl"}} 1920w"
+                  sizes="600px"
+                  src="{{img_url feature_image size="l"}}"
+                  alt="{{title}}"
+                  class="object-cover object-center h-full w-full rounded"
+                />
+        </div>
+      </div>
+      {{/if}}
+    </a>
+  </article>
+{{/foreach}}

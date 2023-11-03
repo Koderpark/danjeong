@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  grid-column: wide-start / wide-end !important;
+  @apply flex flex-col p-24 text-gray-100 rounded-xl overflow-hidden my-24;
+}
+
+.hero-title {
+  position: relative;
+  z-index: 20;
+  @apply gh-container-sm justify-self-center flex flex-col text-center;
+}
+
+.hero-sub {
+  display: block;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  @apply mb-1 text-base;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  content: "";
+  background: rgba(0, 0, 0, 0.33);
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-image img {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-noimage {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tag-color, var(--ghost-accent-color));
+}

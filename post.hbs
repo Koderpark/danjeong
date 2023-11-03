@@ -3,64 +3,10 @@
 {{#post}}
 
 <article class="gh-article {{post_class}}">
-    <header class="gh-header gh-canvas">
-        <span class="gh-post-meta text-base"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-        <h1 class="gh-title text-4xl kg-width-wide">{{title}}</h1>
-
-        {{#if custom_excerpt}}
-        <p class="gh-excerpt text-xl">{{custom_excerpt}}</p>
-        {{/if}}
-        
-        <div class="place-self-center mt-2">
-            {{>pill-tag}}
-        </div>
-
-        {{#if feature_image}}
-        <figure class="gh-feature-image">
-            <picture>
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="avif"}} 30w,
-                {{img_url feature_image size="xs" format="avif"}} 100w,
-                {{img_url feature_image size="s" format="avif"}} 300w,
-                {{img_url feature_image size="m" format="avif"}} 600w,
-                {{img_url feature_image size="l" format="avif"}} 1200w,
-                {{img_url feature_image size="xl" format="avif"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/avif"
-              >
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="webp"}} 30w,
-                {{img_url feature_image size="xs" format="webp"}} 100w,
-                {{img_url feature_image size="s" format="webp"}} 300w,
-                {{img_url feature_image size="m" format="webp"}} 600w,
-                {{img_url feature_image size="l" format="webp"}} 1200w,
-                {{img_url feature_image size="xl" format="webp"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/webp"
-              >
-              <img
-                srcset="
-                {{img_url feature_image size="xxs"}} 30w,
-                {{img_url feature_image size="xs"}} 100w,
-                {{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1200w,
-                {{img_url feature_image size="xl"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                src="{{img_url feature_image size="l"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-              >
-            </picture>
-            {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
-            {{/if}}
-        </figure>
-        {{/if}}
-    </header>
+    {{> "section/hero"}}
 
     <div class="gh-content gh-canvas">
+			<aside class="gh-sidebar"><div class="gh-toc"></div></aside> {{! The TOC will be inserted here }}
         {{content}}
     </div>
 
@@ -95,20 +41,9 @@
     </div>
 </aside>
 
-<div class="gh-container">
-    <h1>test</h1>
-
-    {{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}"}}
-        <section class="related-posts gh-inner">
-            <h3 class="related-title">
-                <span class="text">You might also like...</span>
-            </h3>
-            <div class="post-feed">
-                {{> "card-article"}}
-            </div>
-        </section>
-    {{/get}}
-</div>
+{{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}"}}
+  {{> "section/featured"}}
+{{/get}}
 
 {{/post}}
 

@@ -1,6 +1,8 @@
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 
+@import "partials/section.css";
+
 /* Base components */
 @import "vars.css";
 @import "components/global.css";
@@ -20,6 +22,7 @@
 @import "ghost/comments.css";
 
 @import "ghost/post.css";
+@import "toc.css";
 
 /* Tailwindcss components */
 @tailwind base;
@@ -105,17 +108,12 @@
   flex-direction: column;
 }
 
-.gh-page {
-  padding: 0 4vmin;
-}
-
 .gh-article {
-  padding: 8vmin 0;
 }
 
 .gh-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -167,7 +165,7 @@
   opacity: 0.5;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .gh-page-head > p {
     font-size: 1.6rem;
   }
@@ -175,34 +173,6 @@
 
 /* Post
 /* ---------------------------------------------------------- */
-
-.gh-header {
-  padding: 0 0 8vmin 0;
-  text-align: center;
-}
-
-.gh-post-meta {
-  display: block;
-  margin: 0 0 1rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  opacity: 0.8;
-}
-
-.gh-excerpt {
-  margin: 1rem 0 0 0;
-}
-
-.gh-feature-image {
-  grid-column: wide-start / wide-end;
-  width: 100%;
-  margin: 8vmin 0 0;
-}
-
-.gh-feature-image img {
-  margin-inline: auto;
-  width: 100%;
-}
 
 .gh-post-footer {
   margin: 2rem 0;

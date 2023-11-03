@@ -9,6 +9,7 @@
         <title>{{meta_title}}</title>
 
         {{ghost_head}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
         {{! Outputs important meta data and settings, should always be in <head> }}
 
     </head>
@@ -42,6 +43,20 @@
 
         {{! <foot> }}
         {{ghost_foot}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
+        {{! Initialize Tocbot after you load the script }}
+<script>
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.gh-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.gh-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3, h4',
+        // Ensure correct positioning
+        hasInnerContainers: true,
+    });
+</script>
         {{! Outputs important scripts - should always be included before closing body tag }}
 
     </body>

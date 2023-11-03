@@ -4,7 +4,7 @@ This script continously loads post as the user scrolls the page. It uses the Int
 Importantly, for this script to work, it requires that each card have the `post` class and that the card container have the `gh-postfeed` class
 */
 
-let link = document.querySelector('link[rel="next"]')?.getAttribute("href");
+let link = document.querySelector('link[rel="next"]')?.getAttribute('href');
 
 // Fetch and parse next page
 async function getNextPage(url) {
@@ -12,16 +12,16 @@ async function getNextPage(url) {
     const res = await fetch(url);
 
     if (!res.ok) {
-      throw new Error("Failed to fetch page");
+      throw new Error('Failed to fetch page');
     }
 
     const nextPageHtml = await res.text();
     const parser = new DOMParser();
-    const parsed = parser.parseFromString(nextPageHtml, "text/html");
-    const posts = parsed.querySelectorAll(".post");
+    const parsed = parser.parseFromString(nextPageHtml, 'text/html');
+    const posts = parsed.querySelectorAll('.post');
     const nextLink = parsed
       .querySelector('link[rel="next"]')
-      ?.getAttribute("href");
+      ?.getAttribute('href');
 
     return { posts, nextLink };
   } catch (error) {
@@ -36,7 +36,7 @@ export default function infiniteScroll() {
 
   const options = {
     // When the last card is within a 150px of the viewport, fetch the next page. This provides a smoother transition between pages
-    rootMargin: "150px",
+    rootMargin: '150px',
   };
 
   const callback = (entries, observer) => {
@@ -46,12 +46,12 @@ export default function infiniteScroll() {
           if (link) {
             getNextPage(link).then(({ posts, nextLink }) => {
               posts.forEach((post) => {
-                document.querySelector(".gh-postfeed").append(post);
+                document.querySelector('.infscroll').append(post);
               });
 
               if (nextLink) {
                 link = nextLink;
-                observer.observe(document.querySelector(".post:last-of-type"));
+                observer.observe(document.querySelector('.post:last-of-type'));
               } else {
                 observer.disconnect();
               }
@@ -66,5 +66,5 @@ export default function infiniteScroll() {
 
   let observer = new IntersectionObserver(callback, options);
 
-  observer.observe(document.querySelector(".post:last-of-type"));
+  observer.observe(document.querySelector('.post:last-of-type'));
 }
