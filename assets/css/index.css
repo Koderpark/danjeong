@@ -21,7 +21,6 @@
 @import "ghost/pagination.css";
 @import "ghost/comments.css";
 
-@import "ghost/post.css";
 @import "toc.css";
 
 /* Tailwindcss components */
@@ -113,13 +112,13 @@
 
 .gh-container {
   width: 100%;
-  max-width: 1080px;
+  max-width: var(--large);
   margin: 0 auto;
 }
 
 .gh-container-sm {
   width: 100%;
-  max-width: 720px;
+  max-width: var(--small);
   margin: 0 auto;
 }
 
@@ -157,7 +156,7 @@
 }
 
 .gh-page-head > p {
-  max-width: 720px;
+  max-width: var(--small);
   margin: 0.3em auto 0;
   padding: 0 6vmin;
   font-size: 1.3em;

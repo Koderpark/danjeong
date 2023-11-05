@@ -4,6 +4,7 @@
 
 .gh-toc > .toc-list {
   position: relative;
+  @apply bg-heavy p-4 rounded-xl h-fit me-4;
 }
 
 .toc-list {
@@ -16,7 +17,7 @@
 }
 
 .gh-toc {
-  @apply bg-heavy p-4 rounded-xl h-fit me-4;
+  @apply h-fit;
 }
 
 .gh-toc a {
@@ -46,5 +47,5 @@
 .gh-toc .is-active-link::before {
   background-color: var(
     --ghost-accent-color
-  ); /* Defines TOC   accent color based on Accent color set in Ghost Admin */
+  ) !important; /* Defines TOC   accent color based on Accent color set in Ghost Admin */
 }

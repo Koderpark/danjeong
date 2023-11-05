@@ -23,7 +23,7 @@
   justify-self: center;
   text-align: center;
   width: 100%;
-  max-width: 720px;
+  max-width: var(--small);
   margin: 0 auto;
 }
 
@@ -70,6 +70,38 @@
   background-color: var(--tag-color, var(--ghost-accent-color));
 }
 
+/* featured.hbs */
+
+.section-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .section-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .is-head-stacked .section-card {
+    margin-top: 32px;
+  }
+}
+
 /* Base components */
 
 /* Variables
@@ -94,11 +126,8 @@
   --font-bold: 700;
   --font-heavy: 800;
   /* Breakpoints */
-  --xlarge: 1680px;
-  --large: 1280px;
-  --medium: 980px;
-  --small: 740px;
-  --xsmall: 480px;
+  --large: 1080px;
+  --small: 720px;
   /* Sizes */
   --height: 4rem;
   --margin: 2rem;
@@ -1025,11 +1054,16 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .gh-canvas,
 .kg-width-full.kg-content-wide {
-  --gap: 4vw;
-  --main: min(var(--content-width, 720px), 100% - var(--gap) * 2);
+  --gap: 1rem;
+  --main: min(var(--content-width, var(--small)), 100% - var(--gap) * 2);
   --wide: minmax(
     0,
-    calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2)
+    calc(
+      (
+          var(--container-width, var(--large)) -
+            var(--content-width, var(--small))
+        ) / 2
+    )
   );
   --full: minmax(var(--gap), 1fr);
   display: grid;
@@ -1250,20 +1284,8 @@ figcaption strong {
 /* Read More
 /* ---------------------------------------------------------- */
 
-.gh-readmore {
-  padding: 8vmin 4vmin;
-  font-size: 2.6rem;
-}
-
-.gh-readmore-inner {
-  display: grid;
-  grid-gap: 8vmin;
-  grid-template-columns: 1fr 1fr;
-}
-
-.gh-readmore-prev {
-  justify-content: flex-end;
-  text-align: right;
+/* .gh-readmore {
+  padding: 4rem 1rem;
 }
 
 .gh-readmore a {
@@ -1274,30 +1296,14 @@ figcaption strong {
 
 .gh-readmore h4 {
   width: 100%;
-  font-size: inherit;
-}
-
-.gh-readmore svg {
-  display: inline-block;
-  vertical-align: middle;
-  height: 1em;
-  margin: 0.15em 0 0;
-}
-
-.gh-readmore svg + h4,
-.gh-readmore h4 + svg {
-  margin-left: 2vmin;
+  @apply text-2xl;
 }
 
 @media (max-width: 700px) {
-  .gh-readmore {
-    font-size: 1.6rem;
+  .gh-readmore h4 {
+    @apply text-base;
   }
-
-  .gh-readmore svg {
-    margin: 0.1em 0 0;
-  }
-}
+} */
 
 /* Members Auth Template
 /* ---------------------------------------------------------- */
@@ -1453,34 +1459,6 @@ form[data-members-form].error .message-error {
 /* Error Templates
 /* ---------------------------------------------------------- */
 
-.gh-error {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 2vmin;
-}
-
-.gh-error-content {
-  flex: 1 0 auto;
-  text-align: center;
-}
-
-.gh-error-code {
-  margin: 0;
-  font-size: 14vmin;
-}
-
-.gh-error-description {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  font-size: 4vmin;
-  line-height: 1.2em;
-  font-weight: 300;
-  opacity: 0.6;
-}
-
 .gh-error-link {
   display: block;
   margin-top: 4vmin;
@@ -1502,7 +1480,7 @@ form[data-members-form].error .message-error {
 .gh-error-stack-list > li {
   padding: 2rem 0;
   margin: 0;
-  border-top: rgba(0,0,0,0.1) 1px solid;
+  border-top: rgba(0, 0, 0, 0.1) 1px solid;
 }
 
 .gh-error-stack-function {
@@ -1518,7 +1496,7 @@ form[data-members-form].error .message-error {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8vmin 4vmin 4vmin;
+  padding: 4rem 2rem 2rem;
 }
 
 .gh-foot .gh-container {
@@ -1541,7 +1519,6 @@ form[data-members-form].error .message-error {
   align-items: center;
   justify-content: center;
   list-style: none;
-  font-size: 1.8rem;
 }
 
 .gh-foot-menu .nav li {
@@ -1558,7 +1535,6 @@ form[data-members-form].error .message-error {
 
 .gh-foot-meta {
   margin: 2rem 0;
-  font-size: 1.5rem;
   text-align: center;
   opacity: 0.75;
 }
@@ -1604,55 +1580,12 @@ a.gh-powered svg {
   margin-block: 8vmin 4vmin;
 }
 
-.post-feed {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-}
-
-@media (max-width: 767px) {
-  .post-feed {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .post-feed {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .post-feed {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  .is-head-stacked .post-feed {
-    margin-top: 32px;
-  }
-}
-
 .gh-content {
   position: relative;
 }
 
 .gh-toc > .toc-list {
   position: relative;
-}
-
-.toc-list {
-  overflow: hidden;
-  list-style: none;
-}
-
-.gh-sidebar {
-  display: flex;
-  justify-content: center;
-}
-
-.gh-toc {
   -webkit-margin-end: 1rem;
           margin-inline-end: 1rem;
   height: -moz-fit-content;
@@ -1667,9 +1600,24 @@ a.gh-powered svg {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
 }
 
-:is(.dark .gh-toc) {
+:is(.dark .gh-toc > .toc-list) {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.toc-list {
+  overflow: hidden;
+  list-style: none;
+}
+
+.gh-sidebar {
+  display: flex;
+  justify-content: center;
+}
+
+.gh-toc {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .gh-toc a {
@@ -1720,7 +1668,7 @@ a.gh-powered svg {
 .gh-toc .is-active-link::before {
   background-color: var(
     --ghost-accent-color
-  );
+  ) !important;
   /* Defines TOC   accent color based on Accent color set in Ghost Admin */
 }
 
@@ -2268,6 +2216,11 @@ video {
   z-index: 10;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -2296,16 +2249,8 @@ video {
   display: flex;
 }
 
-.table {
-  display: table;
-}
-
 .grid {
   display: grid;
-}
-
-.contents {
-  display: contents;
 }
 
 .h-fit {
@@ -2362,6 +2307,10 @@ video {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -2384,10 +2333,6 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .rounded-xl {
@@ -2417,6 +2362,11 @@ video {
   padding-right: 3rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2427,9 +2377,26 @@ video {
   padding-bottom: 2rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -2442,8 +2409,9 @@ video {
   line-height: 1;
 }
 
-.text-\[11px\] {
-  font-size: 11px;
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 
 .text-base {
@@ -2463,6 +2431,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.opacity-80 {
+  opacity: 0.8;
 }
 
 .filter {
@@ -2586,13 +2558,13 @@ video {
 
 .gh-container {
   width: 100%;
-  max-width: 1080px;
+  max-width: var(--large);
   margin: 0 auto;
 }
 
 .gh-container-sm {
   width: 100%;
-  max-width: 720px;
+  max-width: var(--small);
   margin: 0 auto;
 }
 
@@ -2630,7 +2602,7 @@ video {
 }
 
 .gh-page-head > p {
-  max-width: 720px;
+  max-width: var(--small);
   margin: 0.3em auto 0;
   padding: 0 6vmin;
   font-size: 1.3em;

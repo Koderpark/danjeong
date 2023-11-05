@@ -1,63 +1,56 @@
 <html lang="{{@site.locale}}">
-    <head>
+  <head>
 
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="{{asset 'built/index.css'}}" />
-        <script src="{{asset 'built/index.js'}}" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{asset 'built/index.css'}}" />
+    <script src="{{asset 'built/index.js'}}" defer></script>
 
-        <title>{{meta_title}}</title>
+    <title>{{meta_title}}</title>
 
-        {{ghost_head}}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
-        {{! Outputs important meta data and settings, should always be in <head> }}
+    {{ghost_head}}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css"
+    />
+    {{! Outputs important meta data and settings, should always be in <head> }}
 
-    </head>
-    <body class="{{body_class}} bg-light">
-        <div class="flex flex-col min-h-screen">
+  </head>
+  <body class="{{body_class}} bg-light">
+    <div class="flex flex-col min-h-screen">
 
-            {{>header}}
+      {{>header}}
 
-            <main class="gh-main">
-                {{{body}}}
-                {{! All content gets inserted here, index.hbs, post.hbs, etc }}
-            </main>
+      <main class="gh-main">
+        {{{body}}}
+        {{! All content gets inserted here, index.hbs, post.hbs, etc }}
+      </main>
 
-            <footer class="gh-foot">
-                <div class="gh-container">
-                    <div class="gh-foot-menu">
-                        {{navigation type="secondary"}}
-                    </div>
-                    <div class="gh-foot-meta">
-                        Published with
-                        <a
-                            href="https://ghost.org"
-                            target="_blank"
-                            rel="noopener"
-                        >Ghost</a>
-                    </div>
-                </div>
-            </footer>
-
+      <footer class="gh-foot">
+        <div class="gh-container">
+          <div class="gh-foot-menu">
+            {{navigation type="secondary"}}
+          </div>
+          <div class="gh-foot-meta">
+            Published with
+            <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+          </div>
         </div>
+      </footer>
 
-        {{! <foot> }}
-        {{ghost_foot}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
-        {{! Initialize Tocbot after you load the script }}
-<script>
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.gh-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.gh-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3, h4',
-        // Ensure correct positioning
-        hasInnerContainers: true,
-    });
-</script>
-        {{! Outputs important scripts - should always be included before closing body tag }}
+    </div>
 
-    </body>
+    {{! <foot> }}
+    {{ghost_foot}}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"
+    ></script>
+    {{! Initialize Tocbot after you load the script }}
+    <script>
+      tocbot.init({ tocSelector: '.gh-toc', contentSelector: '.gh-content',
+      headingSelector: 'h1, h2, h3', hasInnerContainers: true, });
+    </script>
+    {{! Outputs important scripts - should always be included before closing body tag }}
+
+  </body>
 </html>

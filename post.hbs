@@ -6,12 +6,11 @@
     {{> "section/hero"}}
 
     <div class="gh-content gh-canvas">
-			<aside class="gh-sidebar"><div class="gh-toc"></div></aside> {{! The TOC will be inserted here }}
+		<aside class="gh-sidebar"><div class="gh-toc"></div></aside> {{! The TOC will be inserted here }}
         {{content}}
     </div>
 
     <footer class="gh-footer gh-canvas">
-
         <div class="gh-post-authors">
             Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
         </div>
@@ -23,23 +22,19 @@
         {{/if}}
 
         <div class="giscus"></div>
-
     </footer>
-
 </article>
 
-<aside class="gh-readmore">
-    <div class="gh-readmore-inner gh-container">
-        <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
+{{!-- <aside class="gh-container-sm gh-readmore">
+    <div class="flex w-full">
+        <div class="grow">
+            {{#next_post}}<a href="{{url}}"><h4>< {{title}}</h4></a>{{/next_post}}
         </div>
-        <div class="gh-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
-            </a>{{/prev_post}}
+        <div class="grow justify-end text-right">
+            {{#prev_post}}<a href="{{url}}"><h4>{{title}} ></h4></a>{{/prev_post}}
         </div>
     </div>
-</aside>
+</aside> --}}
 
 {{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}"}}
   {{> "section/featured"}}
@@ -57,7 +52,7 @@
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="top"
-        data-theme="light"
+        data-theme="preferred_color_scheme"
         data-lang="ko"
         data-loading="lazy"
         crossorigin="anonymous"

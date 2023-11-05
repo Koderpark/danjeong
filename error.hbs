@@ -1,13 +1,15 @@
 {{!< default}}
 
-<section class="gh-page gh-error">
+<section class="gh-page flex flex-1 flex-col justify-center pb-4">
   <div class="gh-container">
 
-    <section class="gh-error-content">
+    <section class="text-center">
 
-      <h1 class="gh-error-code">{{statusCode}}</h1>
-      <p class="gh-error-description">{{message}}</p>
-      <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+      <h1 class="text-9xl font-bold">{{statusCode}}</h1>
+      <p
+        class="text-3xl px-4 mx-auto gh-container-sm opacity-80"
+      >{{message}}</p>
+      <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page ></a></p>
 
       {{#if errorDetails}}
         <section class="gh-error-stack">
@@ -28,8 +30,6 @@
           </ul>
         </section>
       {{/if}}
-
     </section>
-
   </div>
 </section>
