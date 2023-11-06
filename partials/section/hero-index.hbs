@@ -1,0 +1,89 @@
+<header class="gh-canvas">
+  <div class="hero">
+    {{#get "authors" limit="1" as |author|}}
+      {{#author}}
+        <div class="hero-title">
+          <span class="hero-sub">
+            {{name}}
+          </span>
+
+          <h1 class="text-5xl font-bold">{{slug}}</h1>
+
+          {{#if bio}}
+            <p class="text-xl mt-4">{{bio}}</p>
+          {{/if}}
+
+          <div class="w-fit mx-auto">
+            {{#if website}}
+              <a
+                href="{{website}}"
+                class="tag"
+                target="_blank"
+                rel="noopener"
+              >website</a>
+            {{/if}}
+            {{#if twitter}}
+              <a
+                href="{{twitter_url}}"
+                class="tag"
+                target="_blank"
+                rel="noopener"
+              >Twitter/X</a>
+            {{/if}}
+            {{#if facebook}}
+              <a
+                href="{{facebook_url}}"
+                class="tag"
+                target="_blank"
+                rel="noopener"
+              >Facebook</a>
+            {{/if}}
+          </div>
+        </div>
+
+        {{#if cover_image}}
+          <figure class="hero-image">
+            <picture>
+              <source
+                srcset="
+                {{img_url cover_image size="xxs" format="avif"}} 30w,
+                {{img_url cover_image size="xs" format="avif"}} 100w,
+                {{img_url cover_image size="s" format="avif"}} 300w,
+                {{img_url cover_image size="m" format="avif"}} 600w,
+                {{img_url cover_image size="l" format="avif"}} 1200w,
+                {{img_url cover_image size="xl" format="avif"}} 2000w"
+                sizes="(min-width: 1200px) 1200px, 90vw"
+                type="image/avif"
+              />
+              <source
+                srcset="
+                {{img_url cover_image size="xxs" format="webp"}} 30w,
+                {{img_url cover_image size="xs" format="webp"}} 100w,
+                {{img_url cover_image size="s" format="webp"}} 300w,
+                {{img_url cover_image size="m" format="webp"}} 600w,
+                {{img_url cover_image size="l" format="webp"}} 1200w,
+                {{img_url cover_image size="xl" format="webp"}} 2000w"
+                sizes="(min-width: 1200px) 1200px, 90vw"
+                type="image/webp"
+              />
+              <img
+                srcset="
+                {{img_url cover_image size="xxs"}} 30w,
+                {{img_url cover_image size="xs"}} 100w,
+                {{img_url cover_image size="s"}} 300w,
+                {{img_url cover_image size="m"}} 600w,
+                {{img_url cover_image size="l"}} 1200w,
+                {{img_url cover_image size="xl"}} 2000w"
+                sizes="(min-width: 1200px) 1200px, 90vw"
+                src="{{img_url cover_image size="l"}}"
+              />
+            </picture>
+          </figure>
+        {{else}}
+          <div class="hero-noimage"></div>
+        {{/if}}
+      {{/author}}
+    {{/get}}
+  </div>
+
+</header>
