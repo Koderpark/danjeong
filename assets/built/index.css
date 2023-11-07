@@ -1584,10 +1584,16 @@ a.gh-powered svg {
   position: relative;
 }
 
+.gh-toc {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .gh-toc > .toc-list {
-  position: relative;
-  -webkit-margin-end: 1rem;
-          margin-inline-end: 1rem;
+  overflow: hidden;
+  list-style: none;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 0.75rem;
@@ -1605,45 +1611,36 @@ a.gh-powered svg {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.toc-list {
-  overflow: hidden;
-  list-style: none;
+.toc-list li li {
+  position: relative;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
 }
 
+/* 
 .gh-sidebar {
-  display: flex;
-  justify-content: center;
+  @apply flex justify-center;
 }
 
 .gh-toc {
-  height: -moz-fit-content;
-  height: fit-content;
-}
+  @apply h-fit;
+}*/
 
 .gh-toc a {
-  -webkit-margin-start: 0.5rem;
-          margin-inline-start: 0.5rem;
+  position: relative;
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  word-break: keep-all;
+  border-radius: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .gh-toc a::before {
-  width: 4px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-:is(.dark .gh-toc a)::before {
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
-}
-
-.gh-toc a::before {
-  --tw-text-opacity: 1;
-  color: rgb(3 7 18 / var(--tw-text-opacity));
-}
-
-:is(.dark .gh-toc a)::before {
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
+  background: transparent;
 }
 
 @media (min-width: 1300px) {
@@ -1662,14 +1659,19 @@ a.gh-powered svg {
     position: sticky;
     /* On larger screens, TOC will stay in the same spot on the page */
     top: 6rem;
+    max-width: 360px;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
-.gh-toc .is-active-link::before {
-  background-color: var(
-    --ghost-accent-color
-  ) !important;
-  /* Defines TOC   accent color based on Accent color set in Ghost Admin */
+.is-active-link {
+  display: block;
+  background-color: var(--ghost-accent-color);
+  --tw-text-opacity: 1 !important;
+  color: rgb(3 7 18 / var(--tw-text-opacity)) !important;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 /* Tailwindcss components */
@@ -2319,10 +2321,6 @@ video {
   place-self: center;
 }
 
-.justify-self-center {
-  justify-self: center;
-}
-
 .break-keep {
   word-break: keep-all;
 }
@@ -2484,6 +2482,24 @@ video {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 .u-permalink {
