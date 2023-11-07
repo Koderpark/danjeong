@@ -22,7 +22,7 @@
 @import "ghost/comments.css";
 
 @import "toc.css";
-
+@import "tmp.css";
 /* Tailwindcss components */
 @tailwind base;
 @tailwind components;
@@ -41,6 +41,19 @@
 
 .logo {
   max-height: 192px;
+}
+
+.kg-bookmark-title {
+  @apply text-xl;
+}
+.kg-bookmark-description {
+  @apply text-base;
+}
+.kg-bookmark-metadata {
+  @apply text-base;
+}
+.kg-bookmark-publisher::before {
+  content: "|" !important;
 }
 
 #ghost-portal-root,

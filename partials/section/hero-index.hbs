@@ -2,42 +2,45 @@
   <div class="hero">
     {{#get "authors" limit="1" as |author|}}
       {{#author}}
-        <div class="hero-title">
-          <span class="hero-sub">
-            {{name}}
-          </span>
+        <div class="hero-title text-left flex-row">
 
-          <h1 class="text-5xl font-bold">{{slug}}</h1>
+          <div class="grow p-4">
+            <img src="{{img_url profile_image}}" class=" rounded-lg" />
+          </div>
 
-          {{#if bio}}
-            <p class="text-xl mt-4">{{bio}}</p>
-          {{/if}}
+          <div class="shrink">
+            {{> "section/title" title=name subtitle=slug}}
 
-          <div class="w-fit mx-auto">
-            {{#if website}}
-              <a
-                href="{{website}}"
-                class="tag"
-                target="_blank"
-                rel="noopener"
-              >website</a>
+            {{#if bio}}
+              <p class="text-xl">{{bio}}</p>
             {{/if}}
-            {{#if twitter}}
-              <a
-                href="{{twitter_url}}"
-                class="tag"
-                target="_blank"
-                rel="noopener"
-              >Twitter/X</a>
-            {{/if}}
-            {{#if facebook}}
-              <a
-                href="{{facebook_url}}"
-                class="tag"
-                target="_blank"
-                rel="noopener"
-              >Facebook</a>
-            {{/if}}
+
+            <div class="w-fit">
+              {{#if website}}
+                <a
+                  href="{{website}}"
+                  class="tag"
+                  target="_blank"
+                  rel="noopener"
+                >website</a>
+              {{/if}}
+              {{#if twitter}}
+                <a
+                  href="{{twitter_url}}"
+                  class="tag"
+                  target="_blank"
+                  rel="noopener"
+                >Twitter/X</a>
+              {{/if}}
+              {{#if facebook}}
+                <a
+                  href="{{facebook_url}}"
+                  class="tag"
+                  target="_blank"
+                  rel="noopener"
+                >Facebook</a>
+              {{/if}}
+            </div>
           </div>
         </div>
 

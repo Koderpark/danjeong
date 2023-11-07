@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   grid-column: wide-start / wide-end !important;
-  @apply flex flex-col p-24 text-gray-100 rounded-xl overflow-hidden my-24;
+  @apply flex flex-col p-24 text-gray-100 rounded-xl overflow-hidden my-16;
 }
 
 .hero-title {
