@@ -115,6 +115,37 @@
   }
 }
 
+.pill-sm {
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-size: 13px;
+}
+
+.pill-xl {
+  border-radius: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.pill {
+  font-weight: 700;
+  background-color: var(--tag-color, var(--ghost-accent-color));
+  display: inline-block;
+}
+
+.pill,
+.pill > * {
+  --tw-text-opacity: 1 !important;
+  color: rgb(3 7 18 / var(--tw-text-opacity)) !important;
+}
+
 /* Base components */
 
 /* Variables
@@ -1442,39 +1473,6 @@ form[data-members-form].success .message-success {
 
 form[data-members-form].error .message-error {
   display: block;
-}
-
-/* Error Templates
-/* ---------------------------------------------------------- */
-
-.gh-error-link {
-  display: block;
-  margin-top: 4vmin;
-  font-size: 1.6rem;
-}
-
-.gh-error-stack {
-  max-width: 600px;
-  margin: 0 auto 0;
-  padding: 8vmin 0;
-  text-align: left;
-}
-
-.gh-error-stack-list {
-  margin: 4vmin 0 0;
-  font-size: 1.4rem;
-}
-
-.gh-error-stack-list > li {
-  padding: 2rem 0;
-  margin: 0;
-  border-top: rgba(0, 0, 0, 0.1) 1px solid;
-}
-
-.gh-error-stack-function {
-  margin: 0 0 0.5em;
-  font-size: 1.8rem;
-  color: red;
 }
 
 /* Global Footer
@@ -3777,6 +3775,11 @@ video {
   z-index: 10;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -3795,12 +3798,20 @@ video {
           margin-inline-start: 1rem;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .inline-block {
@@ -3920,11 +3931,6 @@ video {
   padding-right: 3rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -3949,11 +3955,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -4034,21 +4035,6 @@ video {
   display: flex;
   justify-content: space-between;
   margin-block: 4vmin;
-}
-
-.tag {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-size: 11px;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(3 7 18 / var(--tw-text-opacity));
-  background-color: var(--tag-color, var(--ghost-accent-color));
-  text-transform: uppercase;
-  border-radius: 0.5rem;
-  display: inline-block;
 }
 
 .logo {

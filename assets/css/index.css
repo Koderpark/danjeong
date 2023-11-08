@@ -2,6 +2,7 @@
 /* ---------------------------------------------------------- */
 
 @import "partials/section.css";
+@import "partials/pill.css";
 
 /* Base components */
 @import "vars.css";
@@ -14,7 +15,6 @@
 @import "ghost/header.css";
 @import "ghost/content.css";
 @import "ghost/members.css";
-@import "ghost/errors.css";
 @import "ghost/footer.css";
 
 @import "toc.css";
@@ -55,14 +55,6 @@
   display: flex;
   justify-content: space-between;
   margin-block: 4vmin;
-}
-
-.tag {
-  @apply text-gray-950 px-2 py-1 text-[11px] font-bold;
-  background-color: var(--tag-color, var(--ghost-accent-color));
-  text-transform: uppercase;
-  border-radius: 0.5rem;
-  display: inline-block;
 }
 
 .logo {

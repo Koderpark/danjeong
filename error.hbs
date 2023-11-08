@@ -6,30 +6,10 @@
     <section class="text-center">
 
       <h1 class="text-9xl font-bold">{{statusCode}}</h1>
-      <p
-        class="text-3xl px-4 mx-auto gh-container-sm opacity-80"
-      >{{message}}</p>
-      <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page ></a></p>
-
-      {{#if errorDetails}}
-        <section class="gh-error-stack">
-          <h4>Theme errors:</h4>
-          <ul class="gh-error-stack-list">
-            {{#foreach errorDetails}}
-              <li>
-                <h5 class="gh-error-stack-function">{{{rule}}}</h5>
-
-                {{#foreach failures}}
-                  <span class="gh-error-stack-file"><strong>Ref:</strong>
-                    {{ref}}</span><br />
-                  <span class="gh-error-stack-file"><strong>Message:</strong>
-                    {{message}}</span>
-                {{/foreach}}
-              </li>
-            {{/foreach}}
-          </ul>
-        </section>
-      {{/if}}
+      <p class="text-5xl opacity-80">{{message}}</p>
+      <p class="pill pill-xl mt-8">
+        <a href="{{@site.url}}">블로그 홈으로 ></a>
+      </p>
     </section>
   </div>
 </section>

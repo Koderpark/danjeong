@@ -15,18 +15,12 @@
             Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
         </div>
 
-        {{#if comments}}
-        <section class="gh-post-comments">
-            {{comments}}
-        </section>
-        {{/if}}
-
         <div class="giscus"></div>
     </footer>
 </article>
 
 {{!-- <aside class="gh-container-sm gh-readmore">
-    <div class="flex w-full">
+    <div class="flex w-full my-8">
         <div class="grow">
             {{#next_post}}<a href="{{url}}"><h4>< {{title}}</h4></a>{{/next_post}}
         </div>
