@@ -13,13 +13,9 @@
 /* Ghost components */
 @import "ghost/header.css";
 @import "ghost/content.css";
-@import "ghost/readmore.css";
 @import "ghost/members.css";
 @import "ghost/errors.css";
 @import "ghost/footer.css";
-@import "ghost/badge.css";
-@import "ghost/pagination.css";
-@import "ghost/comments.css";
 
 @import "toc.css";
 @import "tmp.css";
@@ -30,6 +26,36 @@
 
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
+
+/* Read More
+/* ---------------------------------------------------------- */
+
+/* .gh-readmore {
+  padding: 4rem 1rem;
+}
+
+.gh-readmore a {
+  display: flex;
+  color: currentColor;
+  text-decoration: none;
+}
+
+.gh-readmore h4 {
+  width: 100%;
+  @apply text-2xl;
+}
+
+@media (max-width: 700px) {
+  .gh-readmore h4 {
+    @apply text-base;
+  }
+} */
+
+.gh-pagination .pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 4vmin;
+}
 
 .tag {
   @apply text-gray-950 px-2 py-1 text-[11px] font-bold;
