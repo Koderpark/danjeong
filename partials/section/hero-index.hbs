@@ -2,43 +2,20 @@
   <div class="hero">
     {{#get "authors" limit="1" as |author|}}
       {{#author}}
-        <div class="hero-title text-left flex-row">
+        <div class="hero-title text-left">
+          <div class="flex flex-row items-center">
+            <div class="aspect-square">
+              <img
+                src="{{img_url profile_image}}"
+                class="h-full w-full rounded-lg"
+              />
+            </div>
 
-          <div class="grow p-4">
-            <img src="{{img_url profile_image}}" class=" rounded-lg" />
-          </div>
+            <div class="h-fit ms-4">
+              {{> "section/title" title=name subtitle=slug}}
 
-          <div class="shrink">
-            {{> "section/title" title=name subtitle=slug}}
-
-            {{#if bio}}
-              <p class="text-xl">{{bio}}</p>
-            {{/if}}
-
-            <div class="w-fit">
-              {{#if website}}
-                <a
-                  href="{{website}}"
-                  class="tag"
-                  target="_blank"
-                  rel="noopener"
-                >website</a>
-              {{/if}}
-              {{#if twitter}}
-                <a
-                  href="{{twitter_url}}"
-                  class="tag"
-                  target="_blank"
-                  rel="noopener"
-                >Twitter/X</a>
-              {{/if}}
-              {{#if facebook}}
-                <a
-                  href="{{facebook_url}}"
-                  class="tag"
-                  target="_blank"
-                  rel="noopener"
-                >Facebook</a>
+              {{#if bio}}
+                <p class="text-lg">{{bio}}</p>
               {{/if}}
             </div>
           </div>

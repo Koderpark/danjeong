@@ -4,7 +4,8 @@
     <div class="gh-container">
 
         {{#author}}
-        <header class="gh-page-head">
+            {{> "section/hero-index"}}
+        {{!-- <header class="gh-page-head">
             {{#if profile_image}}
                 <img class="gh-author-image" src="{{profile_image}}" alt="{{name}}" />
             {{/if}}
@@ -31,7 +32,7 @@
             {{#if cover_image}}
                 <img class="gh-page-image" src="{{cover_image}}" alt="{{name}}" />
             {{/if}}
-        </header>
+        </header> --}}
         {{/author}}
     </div>
       {{> "section/title" title="최신 글" subtitle="recent article"}}

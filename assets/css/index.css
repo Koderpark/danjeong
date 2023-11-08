@@ -137,12 +137,14 @@ h3 {
   width: 100%;
   max-width: var(--large);
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .gh-container-sm {
   width: 100%;
   max-width: var(--small);
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .gh-head-actions a:not(.gh-button) {

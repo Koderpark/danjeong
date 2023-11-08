@@ -10,9 +10,9 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: 0.75rem;
-  padding: 6rem;
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
+  padding: 6rem;
 }
 
 .hero-title {
@@ -25,6 +25,7 @@
   width: 100%;
   max-width: var(--small);
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .hero-sub {
@@ -42,7 +43,7 @@
   inset: 0;
   z-index: 10;
   content: "";
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-image {
@@ -81,6 +82,18 @@
 @media (max-width: 767px) {
   .section-card {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    padding: 1rem;
+  }
+
+  .hero-title > div {
+    flex-direction: column;
   }
 }
 
@@ -521,7 +534,6 @@ h6 {
 }
 
 .list a {
-  height: 100%;
   width: 100%;
 }
 
@@ -1155,7 +1167,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
   .gh-canvas ul,
   .gh-canvas dl,
   .gh-canvas p {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
   }
 
   .gh-content blockquote::before {
@@ -1191,8 +1203,8 @@ figcaption strong {
   padding: 0.15em 0.4em 0.15em;
   border: #e1eaef 1px solid;
   font-weight: 400 !important;
-  font-size: 0.9em;
-  line-height: 1em;
+  /* font-size: 0.9em; */
+  /* line-height: 1em; */
   color: #dc0050;
   background: #f0f6f9;
   border-radius: 0.25em;
@@ -1256,7 +1268,7 @@ figcaption strong {
 .gh-content th {
   padding: 0.5em 0.8em;
   text-align: left;
-  font-size: 0.75em;
+  /* font-size: 0.75em; */
   text-transform: uppercase;
 }
 
@@ -1554,13 +1566,15 @@ a.gh-powered:hover {
   font-size: 12px;
   line-height: 12px;
   letter-spacing: -0.3px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   font-weight: 600;
   text-decoration: none;
   color: #383838;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.08);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
 
@@ -3824,18 +3838,9 @@ video {
   z-index: 10;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .mb-16 {
@@ -3846,25 +3851,17 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.ms-4 {
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.me-4 {
-  -webkit-margin-end: 1rem;
-          margin-inline-end: 1rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
 }
 
 .inline-block {
@@ -3879,8 +3876,8 @@ video {
   display: grid;
 }
 
-.h-32 {
-  height: 8rem;
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-fit {
@@ -3892,24 +3889,8 @@ video {
   height: 100%;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
-.h-16 {
-  height: 4rem;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
-}
-
-.w-32 {
-  width: 8rem;
 }
 
 .w-fit {
@@ -3921,16 +3902,8 @@ video {
   width: 100%;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.shrink {
-  flex-shrink: 1;
 }
 
 .grow {
@@ -3965,10 +3938,6 @@ video {
   justify-content: center;
 }
 
-.justify-items-center {
-  justify-items: center;
-}
-
 .gap-1 {
   gap: 0.25rem;
 }
@@ -3989,14 +3958,6 @@ video {
   border-radius: 0.25rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -4015,10 +3976,6 @@ video {
   padding: 0.5rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -4034,18 +3991,8 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.pe-4 {
-  -webkit-padding-end: 1rem;
-          padding-inline-end: 1rem;
 }
 
 .text-left {
@@ -4088,6 +4035,11 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -4268,12 +4220,14 @@ h3 {
   width: 100%;
   max-width: var(--large);
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .gh-container-sm {
   width: 100%;
   max-width: var(--small);
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .gh-head-actions a:not(.gh-button) {
