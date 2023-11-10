@@ -4,7 +4,6 @@
 .hero {
   position: relative;
   grid-column: wide-start / wide-end !important;
-  margin-top: 4rem;
   margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
@@ -24,7 +23,8 @@
   text-align: center;
   width: 100%;
   max-width: var(--small);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title-index {
@@ -3832,6 +3832,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -4185,13 +4189,15 @@ h3 {
 .gh-container {
   width: 100%;
   max-width: var(--large);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gh-container-sm {
   width: 100%;
   max-width: var(--small);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gh-head-actions a:not(.gh-button) {

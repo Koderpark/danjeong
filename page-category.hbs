@@ -1,7 +1,7 @@
 {{!< default}}
 <div class="gh-page">
   {{> "section/title" title="카테고리" subtitle="category"}}
-  <div class="gh-container-sm">
+  <div class="mt-4 gh-container-sm">
     {{#post}}
       {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
         {{> "list/tag"}}
