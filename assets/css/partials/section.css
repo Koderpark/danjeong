@@ -63,16 +63,7 @@
 
 /* featured.hbs */
 
-.section-card {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-}
-
 @media (max-width: 767px) {
-  .section-card {
-    grid-template-columns: 1fr;
-  }
   .hero {
     @apply p-4;
   }
@@ -83,23 +74,5 @@
 
   .hero-title > div {
     @apply flex-col;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .section-card {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .section-card {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  .is-head-stacked .section-card {
-    margin-top: 32px;
   }
 }

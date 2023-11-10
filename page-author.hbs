@@ -1,0 +1,17 @@
+{{!< default}}
+<div class="gh-page">
+  {{> "section/title" title="글쓴이" subtitle="author"}}
+  <div class="mt-4">
+    <div class="gh-container">
+      <div class="section-card-2">
+        {{#post}}
+          {{#get
+            "authors" limit="all" include="count.posts" order="count.posts desc"
+          }}
+            {{> "card/author"}}
+          {{/get}}
+        {{/post}}
+      </div>
+    </div>
+  </div>
+</div>

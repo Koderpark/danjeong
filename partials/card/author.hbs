@@ -1,0 +1,35 @@
+{{#foreach authors}}
+  <article class="card card-article u-shadow">
+    <a href="{{url}}" class="">
+      <figure>
+        <div class="card-image">
+          {{#if profile_image}}
+            <img
+              class=""
+              src="{{img_url profile_image}}"
+              alt="{{title}}"
+              loading="lazy"
+            />
+          {{else}}
+            <div class="img"></div>
+          {{/if}}
+        </div>
+      </figure>
+
+      <div class="card-desc">
+        <header class="w-full">
+
+          <p class="text-xl break-keep font-bold mb-4">
+            {{name}}
+            |
+            {{slug}}
+          </p>
+
+          {{#if bio}}
+            <p class="text-base break-keep">{{bio}}</p>
+          {{/if}}
+        </header>
+      </div>
+    </a>
+  </article>
+{{/foreach}}
