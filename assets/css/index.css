@@ -30,6 +30,10 @@
 /* Read More
 /* ---------------------------------------------------------- */
 
+body {
+  @apply break-keep;
+}
+
 /* .gh-readmore {
   padding: 4rem 1rem;
 }
@@ -62,13 +66,13 @@
 }
 
 .kg-bookmark-title {
-  @apply text-xl;
+  @apply text-xl !important;
 }
 .kg-bookmark-description {
-  @apply text-base;
+  @apply text-base !important;
 }
 .kg-bookmark-metadata {
-  @apply text-base;
+  @apply text-base !important;
 }
 .kg-bookmark-publisher::before {
   content: "|" !important;
@@ -155,14 +159,12 @@ h3 {
   width: 100%;
   max-width: var(--large);
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .gh-container-sm {
   width: 100%;
   max-width: var(--small);
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .gh-head-actions a:not(.gh-button) {
@@ -208,6 +210,10 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  .gh-page {
+    @apply mx-4;
+  }
+
   .gh-page-head > p {
     font-size: 1.6rem;
   }

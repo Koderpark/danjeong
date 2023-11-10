@@ -25,7 +25,18 @@
   width: 100%;
   max-width: var(--small);
   margin: 0 auto;
-  padding: 0 1rem;
+}
+
+.hero-title-index {
+  text-align: center;
+}
+
+.hero-index-profile {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  width: 128px;
+  height: 128px;
 }
 
 .hero-sub {
@@ -43,7 +54,7 @@
   inset: 0;
   z-index: 10;
   content: "";
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-image {
@@ -629,26 +640,35 @@ h6 {
 
 .list-article {
   margin-bottom: 2rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.list-article > a {
+  position: relative;
+  display: flex;
+  color: currentColor;
 }
 
 .list-article .img {
-  width: 320px;
-  height: 180px;
+  max-width: 256px;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
+  padding: 0.5rem;
 }
 
 .list-article .list-desc {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  -webkit-padding-start: 1rem;
-          padding-inline-start: 1rem;
-  -webkit-padding-end: 2rem;
-          padding-inline-end: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
 }
 
 .list-article .list-desc:hover {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .list-article.no-image:not(.featured) img {
@@ -674,6 +694,18 @@ h6 {
 .list-article.featured.no-image a::before {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.33), transparent),
     var(--tag-color, var(--ghost-accent-color));
+}
+
+@media (max-width: 768px) {
+  .list-article > a {
+    flex-direction: column-reverse;
+  }
+
+  .list-article .img {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 1rem;
+  }
 }
 
 .card {
@@ -3780,26 +3812,12 @@ video {
   margin-bottom: 2rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mb-16 {
   margin-bottom: 4rem;
 }
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.ms-4 {
-  -webkit-margin-start: 1rem;
-          margin-inline-start: 1rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .mt-2 {
@@ -3824,10 +3842,6 @@ video {
 
 .grid {
   display: grid;
-}
-
-.aspect-square {
-  aspect-ratio: 1 / 1;
 }
 
 .h-fit {
@@ -3864,10 +3878,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -3892,10 +3902,6 @@ video {
   gap: 0.25rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .place-self-center {
   place-self: center;
 }
@@ -3908,8 +3914,8 @@ video {
   border-radius: 0.25rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .object-cover {
@@ -3922,8 +3928,8 @@ video {
      object-position: center;
 }
 
-.p-2 {
-  padding: 0.5rem;
+.p-4 {
+  padding: 1rem;
 }
 
 .px-12 {
@@ -3936,12 +3942,13 @@ video {
   padding-bottom: 2rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.text-left {
-  text-align: left;
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -4010,6 +4017,10 @@ video {
 /* Read More
 /* ---------------------------------------------------------- */
 
+body {
+  word-break: keep-all;
+}
+
 /* .gh-readmore {
   padding: 4rem 1rem;
 }
@@ -4042,18 +4053,18 @@ video {
 }
 
 .kg-bookmark-title {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
 }
 
 .kg-bookmark-description {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
 }
 
 .kg-bookmark-metadata {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
 }
 
 .kg-bookmark-publisher::before {
@@ -4175,14 +4186,12 @@ h3 {
   width: 100%;
   max-width: var(--large);
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .gh-container-sm {
   width: 100%;
   max-width: var(--small);
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .gh-head-actions a:not(.gh-button) {
@@ -4228,6 +4237,11 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  .gh-page {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .gh-page-head > p {
     font-size: 1.6rem;
   }

@@ -1,6 +1,6 @@
 {{#foreach posts}}
-  <article class="list list-article {{post_class}} h-fit">
-    <a href="{{url}}" class="relative flex gap-4">
+  <article class="list list-article {{post_class}}">
+    <a href="{{url}}">
       <div class="list-desc z-10 flex-1">
         <header class="w-full">
           {{#if primary_tag}}
@@ -22,7 +22,7 @@
       </div>
       {{#if feature_image}}
       <div class="flex flex-col justify-center">
-        <div class="img p-2">
+        <div class="img">
           <img
                   srcset="{{img_url feature_image size="s"}} 400w,
                             {{img_url feature_image size="m"}} 750w,

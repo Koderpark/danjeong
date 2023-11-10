@@ -2,20 +2,22 @@
   <div class="hero">
     {{#get "authors" limit="1" as |author|}}
       {{#author}}
-        <div class="hero-title text-left">
-          <div class="flex flex-row items-center">
-            <div class="aspect-square">
-              <img
-                src="{{img_url profile_image}}"
-                class="h-full w-full rounded-lg"
-              />
-            </div>
+        <div class="hero-title hero-title-index">
+          <div class="">
+            {{#if profile_image}}
+              <div class="hero-index-profile">
+                <img
+                  src="{{img_url profile_image}}"
+                  class="h-full w-full rounded-full"
+                />
+              </div>
+            {{/if}}
 
-            <div class="h-fit ms-4">
+            <div class="h-fit w-fit">
               {{> "section/title" title=name subtitle=slug}}
 
               {{#if bio}}
-                <p class="text-lg">{{bio}}</p>
+                <p class="text-lg break-keep">{{bio}}</p>
               {{/if}}
             </div>
           </div>

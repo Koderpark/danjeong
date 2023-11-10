@@ -11,6 +11,16 @@
   @apply gh-container-sm justify-self-center flex flex-col text-center;
 }
 
+.hero-title-index {
+  @apply text-center;
+}
+
+.hero-index-profile {
+  @apply mx-auto mb-4;
+  width: 128px;
+  height: 128px;
+}
+
 .hero-sub {
   display: block;
   letter-spacing: 0.5px;
@@ -24,7 +34,7 @@
   inset: 0;
   z-index: 10;
   content: "";
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-image {
