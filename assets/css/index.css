@@ -160,6 +160,7 @@ h3 {
   max-width: var(--large);
   margin-left: auto;
   margin-right: auto;
+  @apply px-2;
 }
 
 .gh-container-sm {
@@ -167,6 +168,7 @@ h3 {
   max-width: var(--small);
   margin-left: auto;
   margin-right: auto;
+  @apply px-2;
 }
 
 .gh-head-actions a:not(.gh-button) {
@@ -192,16 +194,16 @@ h3 {
 /* Page
 /* ---------------------------------------------------------- */
 
-.gh-page-head {
+/* .gh-page-head {
   margin: 0 auto;
   padding: 8vmin 0 4vmin;
   text-align: center;
-}
+} */
 
 .gh-page-image {
   margin: 4vmin 0 0 0;
 }
-
+/* 
 .gh-page-head > p {
   max-width: var(--small);
   margin: 0.3em auto 0;
@@ -209,7 +211,7 @@ h3 {
   font-size: 1.3em;
   line-height: 1.4em;
   opacity: 0.5;
-}
+} */
 
 @media (max-width: 768px) {
   .gh-page {

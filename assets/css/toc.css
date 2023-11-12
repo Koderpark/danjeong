@@ -2,14 +2,14 @@
   position: relative;
 }
 
-.gh-toc {
+/* .gh-toc {
   @apply h-fit;
-}
+} */
 
 .gh-toc > .toc-list {
   overflow: hidden;
   list-style: none;
-  @apply bg-heavy p-4 rounded-xl h-fit me-8;
+  @apply bg-heavy p-4 rounded-xl h-fit mb-8;
 }
 
 .toc-list li li {
@@ -27,7 +27,8 @@
 .gh-toc a {
   position: relative;
   display: block;
-  @apply h-fit px-1 rounded break-keep w-fit;
+  @apply px-1 rounded break-keep w-fit;
+  @apply h-fit !important;
 }
 
 .gh-toc a::before {
@@ -48,6 +49,10 @@
     top: 6rem;
     max-width: 360px;
     @apply w-fit;
+  }
+
+  .gh-toc > .toc-list {
+    @apply me-8;
   }
 }
 
