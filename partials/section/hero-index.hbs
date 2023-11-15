@@ -9,6 +9,7 @@
                 <img
                   src="{{img_url profile_image}}"
                   class="h-full w-full rounded-full object-cover"
+                  loading="lazy"
                 />
               </div>
             {{/if}}
@@ -58,6 +59,7 @@
                 {{img_url cover_image size="xl"}} 2000w"
                 sizes="(min-width: 1200px) 1200px, 90vw"
                 src="{{img_url cover_image size="l"}}"
+                loading="lazy"
               />
             </picture>
           </figure>

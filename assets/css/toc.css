@@ -2,9 +2,9 @@
   position: relative;
 }
 
-/* .gh-toc {
+.gh-toc {
   @apply h-fit;
-} */
+}
 
 .gh-toc > .toc-list {
   overflow: hidden;
@@ -16,14 +16,7 @@
   position: relative;
   @apply ms-4;
 }
-/* 
-.gh-sidebar {
-  @apply flex justify-center;
-}
 
-.gh-toc {
-  @apply h-fit;
-}*/
 .gh-toc a {
   position: relative;
   display: block;
