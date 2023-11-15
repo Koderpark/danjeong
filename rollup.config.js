@@ -22,31 +22,28 @@ import livereload from "rollup-plugin-livereload";
 
 // Rollup configuration
 export default defineConfig({
-    input: "assets/js/index.js",
-    output: {
-        dir: "assets/built",
-        sourcemap: true,
-        format: "iife",
-        plugins: [terser()],
-    },
-    plugins: [
-        commonjs(),
-        nodeResolve(),
-        babel({ babelHelpers: "bundled" }),
-        /*postcss({
-            extract: true,
-            sourceMap: true,
-            plugins: [
-                atImport(),
-                postcssPresetEnv({})
-            ], 
-            minimize: true,
-        }),*/
-        process.env.BUILD !== "production" &&
-            livereload({
-                watch: resolve("."),
-                extraExts: ["hbs"],
-                exclusions: [resolve("node_modules")],
-            }),
-    ],
+  input: "assets/js/index.js",
+  output: {
+    dir: "assets/built",
+    sourcemap: true,
+    format: "iife",
+    plugins: [terser()],
+  },
+  plugins: [
+    commonjs(),
+    nodeResolve(),
+    babel({ babelHelpers: "bundled" }),
+    /*postcss({
+      extract: true,
+      sourceMap: true,
+      plugins: [atImport(), postcssPresetEnv({})],
+      minimize: true,
+    }),*/
+    process.env.BUILD !== "production" &&
+      livereload({
+        watch: resolve("."),
+        extraExts: ["hbs"],
+        exclusions: [resolve("node_modules")],
+      }),
+  ],
 });
