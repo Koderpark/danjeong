@@ -4,12 +4,7 @@
       <figure>
         <div class="card-image">
           {{#if profile_image}}
-            <img
-              class=""
-              src="{{img_url profile_image}}"
-              alt="{{title}}"
-              loading="lazy"
-            />
+            {{> "card/image" href=profile_image size="600px" alt=title}}
           {{else}}
             <div class="img"></div>
           {{/if}}
