@@ -6,7 +6,6 @@
 
 /* Base components */
 @import "vars.css";
-@import "components/global.css";
 @import "components/forms.css";
 @import "components/buttons.css";
 @import "components/list.css";
@@ -140,7 +139,6 @@ ul:not([class]) li + li {
 }
 
 a:not([class]) {
-  color: var(--color-primary);
   text-decoration-skip-ink: auto;
 }
 
