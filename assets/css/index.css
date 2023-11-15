@@ -67,9 +67,12 @@ blockquote {
   padding: 0;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
 }
 
 img {

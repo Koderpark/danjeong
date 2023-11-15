@@ -86,10 +86,12 @@
 
 .gh-content blockquote {
   position: relative;
-  font-style: italic;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary);
+  @apply rounded-xl text-gray-950 font-semibold;
 }
 
-.gh-content blockquote::before {
+/* .gh-content blockquote::before {
   content: "";
   position: absolute;
   left: -1.5em;
@@ -97,7 +99,7 @@
   bottom: 0;
   width: 0.3rem;
   background: var(--color-primary);
-}
+} */
 
 @media (max-width: 650px) {
   .gh-canvas blockquote,
