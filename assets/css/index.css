@@ -23,7 +23,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Reset
 /* ---------------------------------------------------------- */
 
@@ -171,34 +170,6 @@ h6 {
   @apply my-4;
 }
 
-/* @media (max-width: 500px) {
-  h1 {
-    font-size: 2.7rem;
-  }
-}
-@media (max-width: 500px) {
-  h2 {
-    font-size: 2.2rem;
-  }
-}
-@media (max-width: 500px) {
-  h3 {
-    font-size: 1.8rem;
-  }
-}
-
-h4 {
-  font-size: 2.6rem;
-}
-
-h5 {
-  font-size: 2.4rem;
-}
-
-h6 {
-  font-size: 2.2rem;
-} */
-
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -209,8 +180,6 @@ h6 {
   }
 }
 
-=======
->>>>>>> parent of f199443 (toc height / site loading test?)
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
