@@ -14,7 +14,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css"
     />
     {{! Outputs important meta data and settings, should always be in <head> }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark-dimmed.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  	tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
   </head>
   <body class="{{body_class}} bg-light">
     <div class="flex flex-col min-h-screen">
@@ -51,6 +60,5 @@
       headingSelector: 'h1, h2, h3', hasInnerContainers: true, });
     </script>
     {{! Outputs important scripts - should always be included before closing body tag }}
-
   </body>
 </html>
