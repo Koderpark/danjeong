@@ -59,29 +59,29 @@
 
 .gh-content [id] + .kg-card,
 .gh-content blockquote + .kg-card {
-  margin-top: 6vmin;
+  @apply mt-8;
 }
 
-.gh-canvas > blockquote,
-.gh-canvas > ol,
-.gh-canvas > ul,
-.gh-canvas > dl,
-.gh-canvas > p {
+.gh-canvas blockquote,
+.gh-canvas ol,
+.gh-canvas ul,
+.gh-canvas dl,
+.gh-canvas p {
   font-weight: 400;
 }
 
-.gh-content > ul,
-.gh-content > ol,
-.gh-content > dl {
-  padding-left: 1.9em;
+.gh-content ul,
+.gh-content ol,
+.gh-content dl {
+  @apply ps-6;
 }
 
 .gh-content hr {
-  margin-top: 6vmin;
+  @apply mt-8;
 }
 
 .gh-content hr + * {
-  margin-top: 6vmin !important;
+  @apply mt-8;
 }
 
 .gh-content blockquote {
@@ -119,11 +119,11 @@
 /* ---------------------------------------------------------- */
 
 .gh-content :not(.kg-card):not([id]) + .kg-card {
-  margin-top: 6vmin;
+  @apply mt-8;
 }
 
 .gh-content .kg-card + :not(.kg-card) {
-  margin-top: 6vmin;
+  @apply mt-8;
 }
 
 figcaption {
