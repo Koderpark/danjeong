@@ -1,14 +1,7 @@
-.hero {
-  position: relative;
-  grid-column: wide-start / wide-end !important;
-  @apply flex flex-col text-gray-100 rounded-xl overflow-hidden mb-16;
-  @apply p-24;
-}
-
 .hero-title {
   position: relative;
   z-index: 20;
-  @apply gh-container-sm justify-self-center flex flex-col text-center;
+  @apply grid lib-grid lib-grid-m justify-self-center flex-col text-center;
 }
 
 .hero-title-index {

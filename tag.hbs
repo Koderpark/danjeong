@@ -1,13 +1,14 @@
 {{!< default}}
 
-<div class="gh-page">
+{{#> "container"}}
   {{#get "tags" include="count.posts" filter="slug:'{{tag.slug}}'"}}
     {{#foreach tags}}
       {{> "section/hero"}}
     {{/foreach}}
   {{/get}}
-  
+{{/ "container"}}
 
+{{#> "list"}}
   {{> "section/title" title="글 목록" subtitle="article list"}}
   {{> "section/article-inf"}}
-</div>
+{{/ "list"}}

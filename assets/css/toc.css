@@ -4,7 +4,7 @@
 
 .gh-toc {
   @apply h-fit;
-} 
+}
 
 .gh-toc > .toc-list {
   overflow: hidden;
@@ -37,7 +37,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    grid-column: full-start / main-start; /* Place the TOC to the left of the content */
+    grid-column: full-start / m-start !important; /* Place the TOC to the left of the content */
     @apply w-full flex justify-end;
   }
 

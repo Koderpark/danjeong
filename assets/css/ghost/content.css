@@ -1,47 +1,3 @@
-/* Content grid
-/* ---------------------------------------------------------- */
-
-.gh-canvas,
-.kg-width-full.kg-content-wide {
-  --gap: 1rem;
-  --main: min(var(--content-width, var(--small)), 100% - var(--gap) * 2);
-  --wide: minmax(
-    0,
-    calc(
-      (
-          var(--container-width, var(--large)) -
-            var(--content-width, var(--small))
-        ) / 2
-    )
-  );
-  --full: minmax(var(--gap), 1fr);
-
-  display: grid;
-  grid-template-columns:
-    [full-start] var(--full)
-    [wide-start] var(--wide)
-    [main-start] var(--main) [main-end]
-    var(--wide) [wide-end]
-    var(--full) [full-end];
-}
-
-.gh-canvas > * {
-  grid-column: main-start / main-end;
-}
-
-.kg-width-wide,
-.kg-content-wide > div {
-  grid-column: wide-start / wide-end;
-}
-
-.kg-width-full {
-  grid-column: full-start / full-end;
-}
-
-.kg-width-full img {
-  width: 100%;
-}
-
 /* Content & Typography
 /* ---------------------------------------------------------- */
 
@@ -62,11 +18,11 @@
   @apply mt-8;
 }
 
-.gh-canvas blockquote,
-.gh-canvas ol,
-.gh-canvas ul,
-.gh-canvas dl,
-.gh-canvas p {
+.lib-grid blockquote,
+.lib-grid ol,
+.lib-grid ul,
+.lib-grid dl,
+.lib-grid p {
   font-weight: 400;
 }
 
@@ -102,11 +58,11 @@
 } */
 
 @media (max-width: 650px) {
-  .gh-canvas blockquote,
-  .gh-canvas ol,
-  .gh-canvas ul,
-  .gh-canvas dl,
-  .gh-canvas p {
+  .lib-grid blockquote,
+  .lib-grid ol,
+  .lib-grid ul,
+  .lib-grid dl,
+  .lib-grid p {
     /* font-size: 1.8rem; */
   }
 
@@ -136,7 +92,7 @@ figcaption strong {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.gh-canvas :not(pre) code {
+.lib-grid :not(pre) code {
   vertical-align: middle;
   padding: 0.15em 0.4em 0.15em;
   border: #e1eaef 1px solid;
@@ -148,7 +104,7 @@ figcaption strong {
   border-radius: 0.25em;
 }
 
-.gh-canvas > pre code {
+.lib-grid > pre code {
   @apply rounded;
 }
 

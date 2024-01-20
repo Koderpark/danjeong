@@ -3,11 +3,17 @@
 {{#post}}
 <article class="gh-article {{post_class}}">
     {{#match @page.show_title_and_feature_image}}
-        {{> "section/hero"}}
+        {{#> "container"}}
+            {{> "section/hero"}}
+        {{/ "container"}}
     {{/match}}
 
-    <div class="gh-content gh-canvas">
+    <div class="gh-content grid lib-grid lib-grid-m">
         {{content}}
     </div>
+    
+    {{#> "list"}}
+        {{content}}
+    {{/ "list"}}
 </article>
 {{/post}}

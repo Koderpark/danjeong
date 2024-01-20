@@ -3,14 +3,16 @@
 {{#post}}
 
 <article class="gh-article {{post_class}}">
-    {{> "section/hero"}}
+    {{#> "container"}}
+        {{> "section/hero"}}
+    {{/ "container"}}
 
-    <div class="gh-content gh-canvas">
+    <div class="gh-content lib-grid">
 		<aside class="gh-sidebar"><div class="gh-toc"></div></aside> {{! The TOC will be inserted here }}
         {{content}}
     </div>
 
-    <footer class="gh-footer gh-canvas">
+    <footer class="gh-footer lib-grid">
         <div class="gh-post-authors">
             Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
         </div>
@@ -29,10 +31,11 @@
         </div>
     </div>
 </aside> --}}
-
+{{#> "fullscreen"}}
 {{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}"}}
   {{> "section/featured"}}
 {{/get}}
+{{/ "fullscreen"}}
 
 {{/post}}
 
