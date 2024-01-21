@@ -19,7 +19,7 @@
 /* list-tag */
 
 .list-tag {
-  @apply relative mb-8;
+  @apply relative;
 }
 
 .list-tag img {

@@ -9,14 +9,14 @@
         {{reading_time}}
       </span>
 
-      <h1 class="text-5xl font-bold">{{title}}</h1>
+      <h1 class="text-5xl font-bold my-4">{{title}}</h1>
 
       {{#if custom_excerpt}}
-        <p class="text-xl mt-4">{{custom_excerpt}}</p>
+        <p class="text-xl mb-4">{{custom_excerpt}}</p>
       {{/if}}
 
       {{#if tags}}
-        <div class="place-self-center w-fit mt-4">
+        <div class="place-self-center w-fit">
           {{> "pill-tag"}}
         </div>
       {{/if}}

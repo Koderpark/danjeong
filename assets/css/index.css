@@ -163,12 +163,12 @@ h3 {
   @apply font-bold text-2xl;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.gh-content > h1,
+.gh-content > h2,
+.gh-content > h3,
+.gh-content > h4,
+.gh-content > h5,
+.gh-content > h6 {
   @apply mt-16;
 }
 
