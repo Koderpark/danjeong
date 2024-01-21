@@ -18,14 +18,6 @@
   @apply mt-8;
 }
 
-.lib-grid blockquote,
-.lib-grid ol,
-.lib-grid ul,
-.lib-grid dl,
-.lib-grid p {
-  font-weight: 400;
-}
-
 .gh-content ul,
 .gh-content ol,
 .gh-content dl {
