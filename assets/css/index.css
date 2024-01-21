@@ -275,26 +275,6 @@ body {
   object-fit: cover;
 }
 
-h1 {
-  @apply font-bold text-4xl;
-}
-h2 {
-  @apply font-bold text-3xl;
-}
-h3 {
-  @apply font-bold text-2xl;
-}
-
-h1 {
-  @apply font-bold text-4xl;
-}
-h2 {
-  @apply font-bold text-3xl;
-}
-h3 {
-  @apply font-bold text-2xl;
-}
-
 .u-permalink {
   position: absolute;
   top: 0;
@@ -309,22 +289,10 @@ h3 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
 }
 
-.bg-light {
-  @apply bg-gray-100 dark:bg-gray-950;
-  @apply text-gray-950 dark:text-gray-100;
-}
-
-.bg-heavy {
-  @apply bg-gray-50 dark:bg-gray-900 shadow;
-}
-
 .gh-main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-}
-
-.gh-article {
 }
 
 .gh-container {
