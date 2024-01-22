@@ -22,9 +22,6 @@
   @apply mb-1 text-base;
 }
 
-.hero::before {
-}
-
 .hero-image {
   width: 100%;
 }
