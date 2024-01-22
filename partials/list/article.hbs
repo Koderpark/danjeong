@@ -20,25 +20,15 @@
           {{/if}}
         </header>
       </div>
-      {{#if feature_image}}
+      {{!-- {{#if feature_image}} --}}
       <div class="flex flex-col justify-center">
         <div class="img">
-          {{> "card/image" href=feature_image size="600px" alt=title class="object-cover object-center h-full w-full rounded"}}
-          {{!-- <img
-                  srcset="{{img_url feature_image size="s"}} 400w,
-                            {{img_url feature_image size="m"}} 750w,
-                            {{img_url feature_image size="l"}} 960w,
-                            {{img_url feature_image size="xl"}} 1140w,
-                            {{img_url feature_image size="xxl"}} 1920w"
-                  sizes="600px"
-                  src="{{img_url feature_image size="l"}}"
-                  alt="{{title}}"
-                  class="object-cover object-center h-full w-full rounded"
-                  loading="lazy"
-                /> --}}
+          {{#if feature_image}}
+          {{> "card/image" href=feature_image size="600px" alt=title class="object-cover object-center h-full w-full"}}
+          {{/if}}
         </div>
       </div>
-      {{/if}}
+      {{!-- {{/if}} --}}
     </a>
   </article>
 {{/foreach}}

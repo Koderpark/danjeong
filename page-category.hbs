@@ -6,7 +6,7 @@
     {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
 
       {{#foreach tags}}
-        <div class="list list-tag h-fit {{#if feature_image}}{{else}}no-image{{/if}}">
+        <div class="list list-tag h-fit {{#if feature_image}}{{else}}no-image{{/if}} bg-darker">
           <a href="{{url}}" class="relative">
             {{#if feature_image}}
               <img src="{{feature_image}}"/>

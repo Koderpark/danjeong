@@ -37,17 +37,8 @@
   @apply text-gray-100;
 }
 
-.list-tag a::before {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  content: "";
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), transparent);
-}
-
-.list-tag.no-image a::before {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), transparent),
-    var(--tag-color, var(--ghost-accent-color));
+.list-tag.no-image img {
+  background: var(--tag-color, var(--ghost-accent-color));
 }
 
 .list-tag .list-desc {
@@ -66,26 +57,21 @@
 }
 
 .list-article .img {
-  max-width: 256px;
+  width: 256px;
   overflow: hidden;
-  @apply p-2 aspect-video;
+  @apply m-2 aspect-video rounded;
 }
 
 .list-article .list-desc {
   @apply my-4 ms-4 me-8 hover:mx-6;
 }
 
-.list-article.no-image:not(.featured) img {
+.list-article.no-image .img {
   background: var(--tag-color, var(--ghost-accent-color));
 }
 
 .list-article.featured {
   @apply shadow bg-heavy;
-}
-
-.list-article.featured.no-image a::before {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.33), transparent),
-    var(--tag-color, var(--ghost-accent-color));
 }
 
 @media (max-width: 768px) {
