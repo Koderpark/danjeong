@@ -5,29 +5,6 @@
         <div class="card-image">
           {{#if feature_image}}
             {{> "card/image" href=feature_image size="600px" alt=title}}
-            {{!-- {{#if featured}}
-              <img
-                class=""
-                src="{{img_url feature_image}}"
-                alt="{{title}}"
-                loading="lazy"
-              />
-            {{else}}
-              {{> "card/image" href=feature_imgae size="l" pixel="600px" alt=title}}
-              {{!-- <img
-                srcset="{{img_url feature_image size="s"}} 400w,
-                            {{img_url feature_image size="m"}} 750w,
-                            {{img_url feature_image size="l"}} 960w,
-                            {{img_url feature_image size="xl"}} 1140w,
-                            {{img_url feature_image size="xxl"}} 1920w"
-                sizes="600px"
-                src="{{img_url feature_image size="l"}}"
-                alt="{{title}}"
-                loading="lazy"
-              />
-
-            {{/if}} --}}
-
           {{else}}
             <div class="img"></div>
           {{/if}}

@@ -32,6 +32,12 @@
 
 /* grid system */
 
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
 .lib-grid {
   --grid-m: min(var(--screen-m), 100% - var(--gap) * 2);
   --grid-l: minmax(0, calc((var(--screen-l) - var(--screen-m)) / 2));

@@ -1,11 +1,14 @@
 {{!< default}}
 
-<div class="gh-page">
-  <div class="gh-container">
-      {{#author}}
+<div class="page">
+  {{#> "container"}}
+    {{#author}}
       {{> "section/hero-index"}}
     {{/author}}
-  </div>
-  {{> "section/title" title="최신 글" subtitle="recent article"}}
-  {{> "section/article-inf"}}
+  {{/ "container"}}
+  
+  {{#> "list"}}
+    {{> "section/title" title="최신 글" subtitle="recent article"}}
+    {{> "section/article-inf"}}
+  {{/ "list"}}
 </div>

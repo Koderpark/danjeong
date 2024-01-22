@@ -2,7 +2,7 @@
 
 {{#post}}
 
-<article class="gh-article {{post_class}}">
+<article class="page {{post_class}}">
     {{#> "container"}}
         {{> "section/hero"}}
     {{/ "container"}}
@@ -21,20 +21,10 @@
     </footer>
 </article>
 
-{{!-- <aside class="gh-container-sm gh-readmore">
-    <div class="flex w-full my-8">
-        <div class="grow">
-            {{#next_post}}<a href="{{url}}"><h4>< {{title}}</h4></a>{{/next_post}}
-        </div>
-        <div class="grow justify-end text-right">
-            {{#prev_post}}<a href="{{url}}"><h4>{{title}} ></h4></a>{{/prev_post}}
-        </div>
-    </div>
-</aside> --}}
 {{#> "fullscreen"}}
-{{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}"}}
-  {{> "section/featured"}}
-{{/get}}
+    {{#get "posts" limit="4" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}"}}
+        {{> "section/featured"}}
+    {{/get}}
 {{/ "fullscreen"}}
 
 {{/post}}
