@@ -24,28 +24,31 @@
 /* Primary Navigation
 /* ---------------------------------------------------------- */
 
+.gh-head-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .gh-head-menu .nav {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
+  gap: 0.75rem;
 }
 
-.gh-head-menu .nav li {
-  margin: 0 1.5vmin 0 0;
-  padding: 0;
-}
-
-.gh-head-menu .nav li:not(.nav-current) a {
+.gh-head-menu .nav li a {
   display: inline-block;
-  padding: 5px 0;
   @apply text-gray-950 dark:text-gray-100;
 }
 
+.gh-head-menu .nav li:not(.nav-current) a {
+  @apply pill-clear;
+}
+
 .gh-head-menu .nav-current a {
-  @apply bg-indigo-200 text-gray-950;
-  border-radius: 0.75rem;
-  padding: 0.25rem 1rem;
+  @apply text-gray-950;
 }
 
 /* Secondary Navigation

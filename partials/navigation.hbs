@@ -1,0 +1,25 @@
+<ul class="nav">
+  {{#if @custom.modified_headers}}
+    <li class="nav-current">
+      <a href="https://blog.koder.page" class="pill pill-lg bg-blue-200">{{> "icons/blog"}}<span>blog</span></a>
+    </li>
+    <li class="nav-current">
+      <a href="https://blog.koder.page/tag" class="pill pill-lg bg-violet-200">{{> "icons/tag"}}<span>category</span></a>
+    </li>
+    <li class="nav-current">
+      <a href="https://koder.page"class="pill pill-lg bg-red-200">{{> "icons/home"}}<span>home</span></a>
+    </li>
+    <li class="nav-current">
+      <a href="#" class="pill pill-lg bg-green-200">{{> "icons/code"}}<span>algorithm</span></a>
+    </li>
+    <li class="nav-current">
+      <a href="#" class="pill pill-lg bg-yellow-200">{{> "icons/at"}}<span>contact</span></a>
+    </li>
+  {{else}}
+    {{#foreach navigation}}
+      <li class="{{link_class for=(url) class=(concat "nav-" slug)}}">
+        <a href="{{url absolute="true"}}" class="pill pill-lg">{{label}}</a>
+      </li>
+    {{/foreach}}
+  {{/if}}
+</ul>

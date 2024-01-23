@@ -2,7 +2,6 @@
 /* ---------------------------------------------------------- */
 
 @import "partials/section.css";
-@import "partials/pill.css";
 
 /* Base components */
 @import "components/forms.css";
@@ -196,27 +195,6 @@ body {
   @apply break-keep;
 }
 
-/* .gh-readmore {
-  padding: 4rem 1rem;
-}
-
-.gh-readmore a {
-  display: flex;
-  color: currentColor;
-  text-decoration: none;
-}
-
-.gh-readmore h4 {
-  width: 100%;
-  @apply text-2xl;
-}
-
-@media (max-width: 700px) {
-  .gh-readmore h4 {
-    @apply text-base;
-  }
-} */
-
 .gh-pagination .pagination {
   display: flex;
   justify-content: space-between;
@@ -289,12 +267,6 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
 }
 
-.gh-main {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
 .gh-container {
   width: 100%;
   max-width: var(--large);
@@ -321,45 +293,6 @@ body {
 
 .gh-head-actions a:last-child svg {
   height: 2rem;
-}
-
-/* Page
-/* ---------------------------------------------------------- */
-
-/* .gh-page-head {
-  margin: 0 auto;
-  padding: 8vmin 0 4vmin;
-  text-align: center;
-} */
-
-.gh-page-image {
-  margin: 4vmin 0 0 0;
-}
-/* 
-.gh-page-head > p {
-  max-width: var(--small);
-  margin: 0.3em auto 0;
-  padding: 0 6vmin;
-  font-size: 1.3em;
-  line-height: 1.4em;
-  opacity: 0.5;
-} */
-
-@media (max-width: 768px) {
-  .gh-page {
-    @apply mx-4;
-  }
-
-  .gh-page-head > p {
-    font-size: 1.6rem;
-  }
-}
-
-/* Post
-/* ---------------------------------------------------------- */
-
-.gh-post-footer {
-  margin: 2rem 0;
 }
 
 /* Author Archive
@@ -406,4 +339,8 @@ body {
   .gh-author-meta {
     font-size: 1.6rem;
   }
+}
+
+.bg-noimage {
+  background-color: var(--tag-color, var(--ghost-accent-color));
 }

@@ -1,29 +1,27 @@
-<div class="py-24 hero bg-darker">
+<div class="py-24 px-4 hero bg-darker">
   {{#get "authors" limit="1" as |author|}}
     {{#foreach authors}}
-      <div class="hero-title hero-title-index">
-        <div class="">
-          {{#if profile_image}}
-            <div class="hero-index-profile">
-              <img
-                src="{{img_url profile_image}}"
-                class="h-full w-full rounded-full object-cover"
-              />
-            </div>
-          {{/if}}
-
-          <div class="w-full h-fit">
-            {{> "section/title" title=name subtitle=slug}}
-
-            {{#if bio}}
-              <p class="text-lg break-keep">{{bio}}</p>
-            {{/if}}
+      <div class="lib-grid text-center relative z-20">
+        {{#if profile_image}}
+          <div class="mx-auto mb-4 w-[128px] h-[128px]">
+            <img
+              src="{{img_url profile_image}}"
+              class="h-full w-full rounded-[16px] object-cover"
+            />
           </div>
+        {{/if}}
+
+        <div class="w-full h-fit">
+          {{> "section/title" title=name subtitle=slug}}
+
+          {{#if bio}}
+            <p class="text-lg break-keep">{{bio}}</p>
+          {{/if}}
         </div>
       </div>
 
       {{#if cover_image}}
-        <figure class="hero-image">
+        <figure class="hero-image w-full">
           <picture>
             <source
               srcset="
@@ -56,12 +54,13 @@
                 {{img_url cover_image size="l"}} 1200w,
                 {{img_url cover_image size="xl"}} 2000w"
               sizes="(min-width: 1200px) 1200px, 90vw"
+              class="bg-image"
               src="{{img_url cover_image size="l"}}"
             />
           </picture>
         </figure>
       {{else}}
-        <div class="hero-noimage"></div>
+        <div class="bg-image bg-noimage"></div>
       {{/if}}
     {{/foreach}}
   {{/get}}

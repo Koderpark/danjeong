@@ -80,6 +80,14 @@
       "xl": {
         "width": 2000
       }
+    },
+    "custom": {
+      "modified_headers": {
+        "type": "boolean",
+        "group": "homepage",
+        "default": false,
+        "description": "Custom headers for author of this theme, koderpark\n(Not recommanded to turn on)"
+      }
     }
   },
   "type": "module",
