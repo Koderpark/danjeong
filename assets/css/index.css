@@ -1,8 +1,6 @@
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 
-@import "partials/section.css";
-
 /* Base components */
 @import "components/forms.css";
 @import "components/buttons.css";
