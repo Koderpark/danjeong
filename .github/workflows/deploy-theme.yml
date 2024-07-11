@@ -14,8 +14,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-      - name: Build
-      - run: npm install
+      - name : Install Dependencies
+      - run: npm ci
+      - name : Build Theme
       - run: npm run build 
   deploy:
     runs-on: ubuntu-22.04
