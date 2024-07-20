@@ -102,38 +102,15 @@
   object-fit: cover;
 }
 
-/* pill */
-
-.pill-sm {
-  @apply px-2 py-0.5 text-[13px] rounded;
-}
-
-.pill-lg {
-  @apply px-4 py-2 text-[1rem] rounded-[2rem];
-}
-
-.pill-xl {
-  @apply px-5 py-3 text-[1.5rem] rounded-[2rem];
-}
-
 .pill {
-  @apply font-semibold shadow;
   background-color: var(--tag-color, var(--ghost-accent-color));
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .pill-clear {
   background-color: transparent;
 }
 
-.pill,
 .pill > * {
   @apply text-gray-950 !important;
   display: inline-block;
-}
-
-.pill svg {
-  @apply me-2 h-[24px];
-  vertical-align: top;
 }

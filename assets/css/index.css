@@ -12,9 +12,9 @@
 @import "ghost/members.css";
 @import "ghost/footer.css";
 
+@import "globals.css";
 @import "toc.css";
 @import "tmp.css";
-@import "globals.css";
 /* Tailwindcss components */
 @tailwind base;
 @tailwind components;

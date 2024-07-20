@@ -37,11 +37,6 @@
   height: 100%;
   background-color: var(--tag-color, var(--ghost-accent-color));
 }
-/*
-.card-article.featured {
-  @apply shadow bg-heavy;
-}
-*/
 
 .section-card-4 {
   display: grid;

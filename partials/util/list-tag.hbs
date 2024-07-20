@@ -1,11 +1,19 @@
 <div class="g-4 flex flex-wrap gap-1">
   {{#if nested}}
     {{#foreach tags}}
-      <span href="{{url}}" class="pill pill-sm" {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}>{{name}}</span>
+      <span href="{{url}}">
+        {{#> "components/pill/sm"}}
+          {{name}}
+        {{/ "components/pill/sm"}}
+      </span>
     {{/foreach}}
   {{else}}
     {{#foreach tags}}
-      <a href="{{url}}" class="pill pill-sm" {{#if accent_color}}style="--tag-color: {{accent_color}};"{{/if}}>{{name}}</a>
+      <a href="{{url}}">
+        {{#> "components/pill/sm"}}
+          {{name}}
+        {{/ "components/pill/sm"}}
+      </a>
     {{/foreach}}
   {{/if}}
-</div>
+</div> 

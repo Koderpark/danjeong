@@ -3,9 +3,11 @@
 <div class="gh-container flex flex-col flex-1 justify-center">
   <section class="text-center">
     <h1 class="text-9xl font-bold">{{statusCode}}</h1>
-    <p class="text-5xl opacity-80">{{message}}</p>
-    <p class="pill pill-xl mt-8">
-      <a href="{{@site.url}}">블로그 홈으로 ></a>
-    </p>
+    <p class="text-5xl opacity-80 mb-8">{{message}}</p>
+    <a href="{{@site.url}}">
+        {{#> "components/pill/xl"}}
+          블로그 홈으로 >
+        {{/ "components/pill/xl"}}
+    </a>
   </section>
 </div>

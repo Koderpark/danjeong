@@ -48,7 +48,7 @@
 }
 
 .gh-head-menu .nav li:not(.nav-current) a {
-  @apply pill-clear;
+  background-color: transparent;
 }
 
 .gh-head-menu .nav-current a {

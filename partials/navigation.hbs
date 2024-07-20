@@ -1,24 +1,53 @@
 <ul class="nav">
-  {{#if @custom.modified_headers}}
+  {{#if @custom.modified_headers }}
     <li class="nav-current">
-      <a href="https://blog.koder.page" class="pill pill-lg bg-blue-200">{{> "icons/blog"}}<span>blog</span></a>
+      <a href="https://blog.koder.page">
+        {{#> "components/pill/lg" color="bg-blue-200"}}
+          {{> "icons/blog"}}
+          <span>blog</span>
+        {{/ "components/pill/lg"}}
+      </a>
     </li>
     <li class="nav-current">
-      <a href="https://blog.koder.page/tag" class="pill pill-lg bg-violet-200">{{> "icons/tag"}}<span>category</span></a>
+      <a href="https://blog.koder.page/tag">
+        {{#> "components/pill/lg" color="bg-violet-200"}}
+          {{> "icons/tag"}}
+          <span>category</span>
+        {{/ "components/pill/lg"}}
+      </a>
     </li>
     <li class="nav-current">
-      <a href="https://koder.page"class="pill pill-lg bg-red-200">{{> "icons/home"}}<span>home</span></a>
+      <a href="https://koder.page/tag">
+        {{#> "components/pill/lg" color="bg-red-200"}}
+          {{> "icons/home"}}
+          <span>home</span>
+        {{/ "components/pill/lg"}}
+      </a>
     </li>
     <li class="nav-current">
-      <a href="#" class="pill pill-lg bg-green-200">{{> "icons/code"}}<span>algorithm</span></a>
+      <a href="#">
+        {{#> "components/pill/lg" color="bg-green-200"}}
+          {{> "icons/code"}}
+          <span>algorithm</span>
+        {{/ "components/pill/lg"}}
+      </a>
     </li>
     <li class="nav-current">
-      <a href="#" class="pill pill-lg bg-yellow-200">{{> "icons/at"}}<span>contact</span></a>
+      <a href="#">
+        {{#> "components/pill/lg" color="bg-yellow-200"}}
+          {{> "icons/at"}}
+          <span>contact</span>
+        {{/ "components/pill/lg"}}
+      </a>
     </li>
   {{else}}
     {{#foreach navigation}}
       <li class="{{link_class for=(url) class=(concat "nav-" slug)}}">
-        <a href="{{url absolute="true"}}" class="pill pill-lg">{{label}}</a>
+        <a href="{{url absolute="true"}}">
+          {{#> "components/pill/lg" color="bg-yellow-200"}}
+            {{label}}
+          {{/ "components/pill/lg"}}
+        </a>
       </li>
     {{/foreach}}
   {{/if}}
