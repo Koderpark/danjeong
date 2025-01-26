@@ -77,11 +77,11 @@
 figcaption {
   text-align: center;
   font-weight: 600;
-  @apply text-gray-100 mt-4;
 }
 
-figcaption strong {
-  color: rgba(0, 0, 0, 0.8);
+figcaption > span {
+  display: block;
+  @apply mt-1;
 }
 
 .lib-grid :not(pre) code {

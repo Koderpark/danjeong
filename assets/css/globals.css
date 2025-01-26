@@ -106,10 +106,6 @@
   background-color: var(--tag-color, var(--ghost-accent-color));
 }
 
-.pill-clear {
-  background-color: transparent;
-}
-
 .pill > * {
   @apply text-gray-950 !important;
   display: inline-block;
