@@ -59,11 +59,7 @@
 .list-article .img {
   width: 256px;
   overflow: hidden;
-  @apply m-2 aspect-video;
-}
-
-.list-article .img > img {
-  @apply rounded;
+  @apply m-2 aspect-video rounded;
 }
 
 .list-article .list-desc {
@@ -87,6 +83,5 @@
     width: 100%;
     overflow: hidden;
     margin: 0;
-    @apply p-4;
   }
 }
