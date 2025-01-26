@@ -1,12 +1,14 @@
 {{!< default}}
 
 {{#> "list"}}
-  {{> "section/title" title="카테고리" subtitle="category"}}
+  <div class="mt-16 mb-8">
+    {{> "section/title" title="카테고리" subtitle="category"}}
+  </div>
   {{#post}}
     {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
 
       {{#foreach tags}}
-        <div class="list list-tag h-fit {{#if feature_image}}{{else}}no-image{{/if}} bg-darker">
+        <div class="list list-tag h-fit {{#if feature_image}}{{else}}no-image{{/if}} bg-darker mb-4">
           <a href="{{url}}" class="relative">
             {{#if feature_image}}
               <img src="{{feature_image}}"/>
