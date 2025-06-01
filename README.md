@@ -19,8 +19,6 @@ We've documented this starter theme pretty heavily so that it should be possible
 
 ## Starter theme features
 
-🔁&nbsp;Livereload by default. See changes instantly in the browser whenever you save a file.
-
 🔎&nbsp;Optimized for VS Code. Find the files you're looking for more easily.
 
 🗃️&nbsp;Write modern JavaScript. Use ESM out of the box to write more manageable Javascript.
